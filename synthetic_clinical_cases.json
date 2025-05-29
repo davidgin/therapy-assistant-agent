@@ -1,0 +1,1312 @@
+[
+  {
+    "case_id": "major_depressive_disorder_001",
+    "patient_demographics": {
+      "age": 68,
+      "gender": "Non-binary",
+      "ethnicity": "Native American",
+      "occupation": "Healthcare Worker",
+      "education_level": "Bachelor's Degree",
+      "marital_status": "In a relationship",
+      "living_situation": "Lives with children"
+    },
+    "presenting_complaint": "Having trouble sleeping and feeling tired all the time",
+    "history_present_illness": "Patient is a 68-year-old Non-binary who presents with a 2 weeks history of symptoms that began with gradual onset. Reports the following symptoms: Significant weight loss or gain, Depressed mood most of the day, nearly every day, Fatigue or loss of energy nearly every day. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "History of anxiety treated with medication in the past.",
+    "past_medical_history": "History of migraine headaches.",
+    "family_history": "Mother with history of depression.",
+    "social_history": "Healthcare Worker, Bachelor's Degree. In a relationship, Lives with children. Social alcohol use on weekends.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Depressed mood, congruent affect. Psychomotor retardation noted. No psychotic symptoms.",
+    "primary_diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+    "secondary_diagnoses": [
+      "Caffeine Use Disorder, Mild",
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood"
+    ],
+    "dsm5_criteria_met": [
+      "Significant weight loss or gain",
+      "Depressed mood most of the day, nearly every day",
+      "Fatigue or loss of energy nearly every day",
+      "Insomnia or hypersomnia nearly every day",
+      "Psychomotor agitation or retardation",
+      "Feelings of worthlessness or inappropriate guilt",
+      "Diminished ability to think or concentrate"
+    ],
+    "icd11_code": "6A70.1",
+    "severity": "Severe",
+    "duration": "Over 2 years",
+    "functional_impairment": "Moderate impairment affecting work attendance and family relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Consider SSRI medication evaluation",
+      "Behavioral activation techniques",
+      "Sleep hygiene education",
+      "Regular exercise and physical activity",
+      "Safety planning if suicidal ideation present"
+    ],
+    "created_date": "2025-07-13T17:18:53.879975"
+  },
+  {
+    "case_id": "major_depressive_disorder_002",
+    "patient_demographics": {
+      "age": 28,
+      "gender": "Female",
+      "ethnicity": "Hispanic/Latino",
+      "occupation": "Student",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Divorced",
+      "living_situation": "Lives with roommates"
+    },
+    "presenting_complaint": "Having trouble sleeping and feeling tired all the time",
+    "history_present_illness": "Patient is a 28-year-old Female who presents with a 1 month history of symptoms that began with gradual onset. Reports the following symptoms: Recurrent thoughts of death or suicidal ideation, Feelings of worthlessness or inappropriate guilt, Depressed mood most of the day, nearly every day. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "No prior psychiatric treatment or hospitalizations.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Sibling with anxiety disorder.",
+    "social_history": "Student, Doctoral Degree. Divorced, Lives with roommates. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Depressed mood, congruent affect. Psychomotor retardation noted. No psychotic symptoms.",
+    "primary_diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Recurrent thoughts of death or suicidal ideation",
+      "Feelings of worthlessness or inappropriate guilt",
+      "Depressed mood most of the day, nearly every day",
+      "Diminished ability to think or concentrate",
+      "Psychomotor agitation or retardation",
+      "Fatigue or loss of energy nearly every day",
+      "Markedly diminished interest or pleasure in activities",
+      "Significant weight loss or gain"
+    ],
+    "icd11_code": "6A70.1",
+    "severity": "Severe",
+    "duration": "3-6 months",
+    "functional_impairment": "Moderate impairment affecting work attendance and family relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Consider SSRI medication evaluation",
+      "Behavioral activation techniques",
+      "Sleep hygiene education",
+      "Regular exercise and physical activity",
+      "Safety planning if suicidal ideation present"
+    ],
+    "created_date": "2025-07-13T17:18:53.879998"
+  },
+  {
+    "case_id": "major_depressive_disorder_003",
+    "patient_demographics": {
+      "age": 51,
+      "gender": "Non-binary",
+      "ethnicity": "Asian",
+      "occupation": "Artist",
+      "education_level": "Master's Degree",
+      "marital_status": "Separated",
+      "living_situation": "Lives with children"
+    },
+    "presenting_complaint": "Feeling sad and empty for the past several weeks",
+    "history_present_illness": "Patient is a 51-year-old Non-binary who presents with a 1 month history of symptoms that began with sudden onset. Reports the following symptoms: Insomnia or hypersomnia nearly every day, Feelings of worthlessness or inappropriate guilt, Depressed mood most of the day, nearly every day. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "No prior psychiatric treatment or hospitalizations.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Mother with history of depression.",
+    "social_history": "Artist, Master's Degree. Separated, Lives with children. Social alcohol use on weekends.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Depressed mood, congruent affect. Psychomotor retardation noted. No psychotic symptoms.",
+    "primary_diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Insomnia or hypersomnia nearly every day",
+      "Feelings of worthlessness or inappropriate guilt",
+      "Depressed mood most of the day, nearly every day",
+      "Diminished ability to think or concentrate",
+      "Significant weight loss or gain",
+      "Recurrent thoughts of death or suicidal ideation",
+      "Psychomotor agitation or retardation",
+      "Fatigue or loss of energy nearly every day",
+      "Markedly diminished interest or pleasure in activities"
+    ],
+    "icd11_code": "6A70.1",
+    "severity": "Moderate",
+    "duration": "3-6 months",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Consider SSRI medication evaluation",
+      "Behavioral activation techniques",
+      "Sleep hygiene education",
+      "Regular exercise and physical activity",
+      "Safety planning if suicidal ideation present"
+    ],
+    "created_date": "2025-07-13T17:18:53.880012"
+  },
+  {
+    "case_id": "major_depressive_disorder_004",
+    "patient_demographics": {
+      "age": 22,
+      "gender": "Female",
+      "ethnicity": "Hispanic/Latino",
+      "occupation": "Artist",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Single",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "Feeling sad and empty for the past several weeks",
+    "history_present_illness": "Patient is a 22-year-old Female who presents with a 1 year history of symptoms that began with following stressful event onset. Reports the following symptoms: Feelings of worthlessness or inappropriate guilt, Psychomotor agitation or retardation, Markedly diminished interest or pleasure in activities. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "History of anxiety treated with medication in the past.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "Mother with history of depression.",
+    "social_history": "Artist, Doctoral Degree. Single, Homeless. Former smoker, quit 2 years ago.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Depressed mood, congruent affect. Psychomotor retardation noted. No psychotic symptoms.",
+    "primary_diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+    "secondary_diagnoses": [
+      "Social Anxiety Disorder",
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood"
+    ],
+    "dsm5_criteria_met": [
+      "Feelings of worthlessness or inappropriate guilt",
+      "Psychomotor agitation or retardation",
+      "Markedly diminished interest or pleasure in activities",
+      "Diminished ability to think or concentrate",
+      "Depressed mood most of the day, nearly every day",
+      "Fatigue or loss of energy nearly every day"
+    ],
+    "icd11_code": "6A70.1",
+    "severity": "Severe",
+    "duration": "Over 2 years",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Consider SSRI medication evaluation",
+      "Behavioral activation techniques",
+      "Sleep hygiene education",
+      "Regular exercise and physical activity",
+      "Safety planning if suicidal ideation present"
+    ],
+    "created_date": "2025-07-13T17:18:53.880028"
+  },
+  {
+    "case_id": "major_depressive_disorder_005",
+    "patient_demographics": {
+      "age": 29,
+      "gender": "Non-binary",
+      "ethnicity": "Caucasian",
+      "occupation": "Healthcare Worker",
+      "education_level": "Some College",
+      "marital_status": "In a relationship",
+      "living_situation": "Lives with partner"
+    },
+    "presenting_complaint": "Having trouble sleeping and feeling tired all the time",
+    "history_present_illness": "Patient is a 29-year-old Non-binary who presents with a 2 weeks history of symptoms that began with following stressful event onset. Reports the following symptoms: Diminished ability to think or concentrate, Psychomotor agitation or retardation, Feelings of worthlessness or inappropriate guilt. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "No known family history of mental illness.",
+    "social_history": "Healthcare Worker, Some College. In a relationship, Lives with partner. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Depressed mood, congruent affect. Psychomotor retardation noted. No psychotic symptoms.",
+    "primary_diagnosis": "Major Depressive Disorder, Single Episode, Moderate",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Diminished ability to think or concentrate",
+      "Psychomotor agitation or retardation",
+      "Feelings of worthlessness or inappropriate guilt",
+      "Recurrent thoughts of death or suicidal ideation",
+      "Depressed mood most of the day, nearly every day",
+      "Markedly diminished interest or pleasure in activities",
+      "Fatigue or loss of energy nearly every day"
+    ],
+    "icd11_code": "6A70.1",
+    "severity": "Moderate",
+    "duration": "Over 2 years",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Consider SSRI medication evaluation",
+      "Behavioral activation techniques",
+      "Sleep hygiene education",
+      "Regular exercise and physical activity",
+      "Safety planning if suicidal ideation present"
+    ],
+    "created_date": "2025-07-13T17:18:53.880039"
+  },
+  {
+    "case_id": "generalized_anxiety_disorder_001",
+    "patient_demographics": {
+      "age": 64,
+      "gender": "Male",
+      "ethnicity": "Caucasian",
+      "occupation": "Teacher",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Widowed",
+      "living_situation": "Lives alone"
+    },
+    "presenting_complaint": "Feeling anxious and on edge most days",
+    "history_present_illness": "Patient is a 64-year-old Male who presents with a 2 weeks history of symptoms that began with gradual onset. Reports the following symptoms: Excessive anxiety and worry about multiple events, Irritability, Muscle tension. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "One psychiatric hospitalization 5 years ago.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "Maternal grandmother with bipolar disorder.",
+    "social_history": "Teacher, Doctoral Degree. Widowed, Lives alone. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious mood, tense appearance. Speech slightly rapid. No psychotic symptoms.",
+    "primary_diagnosis": "Generalized Anxiety Disorder",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Excessive anxiety and worry about multiple events",
+      "Irritability",
+      "Muscle tension",
+      "Difficulty controlling the worry",
+      "Sleep disturbance"
+    ],
+    "icd11_code": "6B00",
+    "severity": "Severe",
+    "duration": "1-3 months",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Mindfulness-based stress reduction",
+      "Progressive muscle relaxation",
+      "Consider SSRI or SNRI medication",
+      "Lifestyle modifications (exercise, caffeine reduction)",
+      "Worry time scheduling technique"
+    ],
+    "created_date": "2025-07-13T17:18:53.880052"
+  },
+  {
+    "case_id": "generalized_anxiety_disorder_002",
+    "patient_demographics": {
+      "age": 28,
+      "gender": "Male",
+      "ethnicity": "Asian",
+      "occupation": "Self-employed",
+      "education_level": "Doctoral Degree",
+      "marital_status": "In a relationship",
+      "living_situation": "Lives with family"
+    },
+    "presenting_complaint": "Trouble sleeping due to racing thoughts",
+    "history_present_illness": "Patient is a 28-year-old Male who presents with a 2 weeks history of symptoms that began with sudden onset. Reports the following symptoms: Difficulty controlling the worry, Sleep disturbance, Restlessness or feeling on edge. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Previous episode of depression treated with therapy 2 years ago.",
+    "past_medical_history": "Type 2 diabetes managed with diet and exercise.",
+    "family_history": "No known family history of mental illness.",
+    "social_history": "Self-employed, Doctoral Degree. In a relationship, Lives with family. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious mood, tense appearance. Speech slightly rapid. No psychotic symptoms.",
+    "primary_diagnosis": "Generalized Anxiety Disorder",
+    "secondary_diagnoses": [
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood"
+    ],
+    "dsm5_criteria_met": [
+      "Difficulty controlling the worry",
+      "Sleep disturbance",
+      "Restlessness or feeling on edge",
+      "Irritability",
+      "Being easily fatigued",
+      "Excessive anxiety and worry about multiple events",
+      "Muscle tension"
+    ],
+    "icd11_code": "6B00",
+    "severity": "Severe",
+    "duration": "2-4 weeks",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Mindfulness-based stress reduction",
+      "Progressive muscle relaxation",
+      "Consider SSRI or SNRI medication",
+      "Lifestyle modifications (exercise, caffeine reduction)",
+      "Worry time scheduling technique"
+    ],
+    "created_date": "2025-07-13T17:18:53.880064"
+  },
+  {
+    "case_id": "generalized_anxiety_disorder_003",
+    "patient_demographics": {
+      "age": 76,
+      "gender": "Male",
+      "ethnicity": "Caucasian",
+      "occupation": "Lawyer",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Divorced",
+      "living_situation": "Lives with roommates"
+    },
+    "presenting_complaint": "Feeling anxious and on edge most days",
+    "history_present_illness": "Patient is a 76-year-old Male who presents with a 1 month history of symptoms that began with following stressful event onset. Reports the following symptoms: Sleep disturbance, Difficulty controlling the worry, Restlessness or feeling on edge. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Lawyer, Doctoral Degree. Divorced, Lives with roommates. Former smoker, quit 2 years ago.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious mood, tense appearance. Speech slightly rapid. No psychotic symptoms.",
+    "primary_diagnosis": "Generalized Anxiety Disorder",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Sleep disturbance",
+      "Difficulty controlling the worry",
+      "Restlessness or feeling on edge",
+      "Irritability",
+      "Difficulty concentrating",
+      "Being easily fatigued",
+      "Muscle tension",
+      "Excessive anxiety and worry about multiple events"
+    ],
+    "icd11_code": "6B00",
+    "severity": "Moderate",
+    "duration": "Over 2 years",
+    "functional_impairment": "Moderate impairment affecting work attendance and family relationships.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Mindfulness-based stress reduction",
+      "Progressive muscle relaxation",
+      "Consider SSRI or SNRI medication",
+      "Lifestyle modifications (exercise, caffeine reduction)",
+      "Worry time scheduling technique"
+    ],
+    "created_date": "2025-07-13T17:18:53.880082"
+  },
+  {
+    "case_id": "generalized_anxiety_disorder_004",
+    "patient_demographics": {
+      "age": 62,
+      "gender": "Non-binary",
+      "ethnicity": "African American",
+      "occupation": "Artist",
+      "education_level": "High School",
+      "marital_status": "Widowed",
+      "living_situation": "Lives with family"
+    },
+    "presenting_complaint": "Trouble sleeping due to racing thoughts",
+    "history_present_illness": "Patient is a 62-year-old Non-binary who presents with a 6 months history of symptoms that began with sudden onset. Reports the following symptoms: Excessive anxiety and worry about multiple events, Sleep disturbance, Being easily fatigued. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "No prior psychiatric treatment or hospitalizations.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "Mother with history of depression.",
+    "social_history": "Artist, High School. Widowed, Lives with family. Denies tobacco, alcohol, or illicit drug use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious mood, tense appearance. Speech slightly rapid. No psychotic symptoms.",
+    "primary_diagnosis": "Generalized Anxiety Disorder",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Excessive anxiety and worry about multiple events",
+      "Sleep disturbance",
+      "Being easily fatigued",
+      "Difficulty controlling the worry",
+      "Restlessness or feeling on edge"
+    ],
+    "icd11_code": "6B00",
+    "severity": "Mild",
+    "duration": "1-3 months",
+    "functional_impairment": "Severe impairment requiring time off work and significant relationship strain.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Mindfulness-based stress reduction",
+      "Progressive muscle relaxation",
+      "Consider SSRI or SNRI medication",
+      "Lifestyle modifications (exercise, caffeine reduction)",
+      "Worry time scheduling technique"
+    ],
+    "created_date": "2025-07-13T17:18:53.880094"
+  },
+  {
+    "case_id": "generalized_anxiety_disorder_005",
+    "patient_demographics": {
+      "age": 77,
+      "gender": "Female",
+      "ethnicity": "African American",
+      "occupation": "Healthcare Worker",
+      "education_level": "High School",
+      "marital_status": "Divorced",
+      "living_situation": "Lives in assisted living"
+    },
+    "presenting_complaint": "Physical symptoms like muscle tension and fatigue",
+    "history_present_illness": "Patient is a 77-year-old Female who presents with a 1 year history of symptoms that began with following stressful event onset. Reports the following symptoms: Difficulty concentrating, Irritability, Restlessness or feeling on edge. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "No prior psychiatric treatment or hospitalizations.",
+    "past_medical_history": "No significant medical history.",
+    "family_history": "Mother with history of depression.",
+    "social_history": "Healthcare Worker, High School. Divorced, Lives in assisted living. Denies tobacco, alcohol, or illicit drug use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious mood, tense appearance. Speech slightly rapid. No psychotic symptoms.",
+    "primary_diagnosis": "Generalized Anxiety Disorder",
+    "secondary_diagnoses": [
+      "Social Anxiety Disorder",
+      "Caffeine Use Disorder, Mild"
+    ],
+    "dsm5_criteria_met": [
+      "Difficulty concentrating",
+      "Irritability",
+      "Restlessness or feeling on edge",
+      "Being easily fatigued",
+      "Sleep disturbance",
+      "Excessive anxiety and worry about multiple events"
+    ],
+    "icd11_code": "6B00",
+    "severity": "Moderate",
+    "duration": "1-2 years",
+    "functional_impairment": "Mild to moderate impact on daily activities and social functioning.",
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Mindfulness-based stress reduction",
+      "Progressive muscle relaxation",
+      "Consider SSRI or SNRI medication",
+      "Lifestyle modifications (exercise, caffeine reduction)",
+      "Worry time scheduling technique"
+    ],
+    "created_date": "2025-07-13T17:18:53.880105"
+  },
+  {
+    "case_id": "ptsd_001",
+    "patient_demographics": {
+      "age": 79,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "occupation": "Lawyer",
+      "education_level": "High School",
+      "marital_status": "Married",
+      "living_situation": "Lives with roommates"
+    },
+    "presenting_complaint": "Difficulty sleeping and concentrating",
+    "history_present_illness": "Patient is a 79-year-old Female who presents with a 1 year history of symptoms that began with gradual onset. Reports the following symptoms: Distressing dreams related to the trauma, Hypervigilance and exaggerated startle response, Intrusive memories or flashbacks of traumatic event. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "History of anxiety treated with medication in the past.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Lawyer, High School. Married, Lives with roommates. Denies tobacco, alcohol, or illicit drug use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Hypervigilant, easily startled. Restricted affect. Describes intrusive memories.",
+    "primary_diagnosis": "Post-Traumatic Stress Disorder",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Distressing dreams related to the trauma",
+      "Hypervigilance and exaggerated startle response",
+      "Intrusive memories or flashbacks of traumatic event",
+      "Avoidance of trauma-related stimuli",
+      "Negative alterations in cognition and mood",
+      "Alterations in arousal and reactivity"
+    ],
+    "icd11_code": "6B40",
+    "severity": "Mild",
+    "duration": "1-3 months",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Trauma-Focused Cognitive Behavioral Therapy",
+      "Eye Movement Desensitization and Reprocessing (EMDR)",
+      "Prolonged Exposure Therapy",
+      "Consider SSRI medication for symptoms",
+      "Grounding and coping skills training",
+      "Support group participation"
+    ],
+    "created_date": "2025-07-13T17:18:53.880115"
+  },
+  {
+    "case_id": "ptsd_002",
+    "patient_demographics": {
+      "age": 37,
+      "gender": "Female",
+      "ethnicity": "Native American",
+      "occupation": "Self-employed",
+      "education_level": "Bachelor's Degree",
+      "marital_status": "In a relationship",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "Feeling constantly on guard and easily startled",
+    "history_present_illness": "Patient is a 37-year-old Female who presents with a 3 months history of symptoms that began with gradual onset. Reports the following symptoms: Avoidance of trauma-related stimuli, Alterations in arousal and reactivity, Intrusive memories or flashbacks of traumatic event. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Sibling with anxiety disorder.",
+    "social_history": "Self-employed, Bachelor's Degree. In a relationship, Homeless. Denies tobacco, alcohol, or illicit drug use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Hypervigilant, easily startled. Restricted affect. Describes intrusive memories.",
+    "primary_diagnosis": "Post-Traumatic Stress Disorder",
+    "secondary_diagnoses": [
+      "Social Anxiety Disorder",
+      "Caffeine Use Disorder, Mild"
+    ],
+    "dsm5_criteria_met": [
+      "Avoidance of trauma-related stimuli",
+      "Alterations in arousal and reactivity",
+      "Intrusive memories or flashbacks of traumatic event",
+      "Distressing dreams related to the trauma",
+      "Intense psychological distress to trauma cues",
+      "Hypervigilance and exaggerated startle response",
+      "Negative alterations in cognition and mood",
+      "Dissociative reactions (flashbacks)"
+    ],
+    "icd11_code": "6B40",
+    "severity": "Mild",
+    "duration": "1-2 years",
+    "functional_impairment": "Mild to moderate impact on daily activities and social functioning.",
+    "treatment_recommendations": [
+      "Trauma-Focused Cognitive Behavioral Therapy",
+      "Eye Movement Desensitization and Reprocessing (EMDR)",
+      "Prolonged Exposure Therapy",
+      "Consider SSRI medication for symptoms",
+      "Grounding and coping skills training",
+      "Support group participation"
+    ],
+    "created_date": "2025-07-13T17:18:53.880126"
+  },
+  {
+    "case_id": "ptsd_003",
+    "patient_demographics": {
+      "age": 49,
+      "gender": "Non-binary",
+      "ethnicity": "Middle Eastern",
+      "occupation": "Unemployed",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Divorced",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "Feeling constantly on guard and easily startled",
+    "history_present_illness": "Patient is a 49-year-old Non-binary who presents with a 1 year history of symptoms that began with sudden onset. Reports the following symptoms: Avoidance of trauma-related stimuli, Distressing dreams related to the trauma, Hypervigilance and exaggerated startle response. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "One psychiatric hospitalization 5 years ago.",
+    "past_medical_history": "History of migraine headaches.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Unemployed, Doctoral Degree. Divorced, Homeless. Social alcohol use on weekends.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Hypervigilant, easily startled. Restricted affect. Describes intrusive memories.",
+    "primary_diagnosis": "Post-Traumatic Stress Disorder",
+    "secondary_diagnoses": [
+      "Social Anxiety Disorder"
+    ],
+    "dsm5_criteria_met": [
+      "Avoidance of trauma-related stimuli",
+      "Distressing dreams related to the trauma",
+      "Hypervigilance and exaggerated startle response",
+      "Alterations in arousal and reactivity",
+      "Negative alterations in cognition and mood",
+      "Intrusive memories or flashbacks of traumatic event",
+      "Intense psychological distress to trauma cues",
+      "Dissociative reactions (flashbacks)"
+    ],
+    "icd11_code": "6B40",
+    "severity": "Moderate",
+    "duration": "6-12 months",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Trauma-Focused Cognitive Behavioral Therapy",
+      "Eye Movement Desensitization and Reprocessing (EMDR)",
+      "Prolonged Exposure Therapy",
+      "Consider SSRI medication for symptoms",
+      "Grounding and coping skills training",
+      "Support group participation"
+    ],
+    "created_date": "2025-07-13T17:18:53.880136"
+  },
+  {
+    "case_id": "ptsd_004",
+    "patient_demographics": {
+      "age": 43,
+      "gender": "Male",
+      "ethnicity": "African American",
+      "occupation": "Artist",
+      "education_level": "Master's Degree",
+      "marital_status": "Divorced",
+      "living_situation": "Lives with partner"
+    },
+    "presenting_complaint": "Feeling constantly on guard and easily startled",
+    "history_present_illness": "Patient is a 43-year-old Male who presents with a 2 weeks history of symptoms that began with gradual onset. Reports the following symptoms: Dissociative reactions (flashbacks), Avoidance of trauma-related stimuli, Intense psychological distress to trauma cues. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "No prior psychiatric treatment or hospitalizations.",
+    "past_medical_history": "Type 2 diabetes managed with diet and exercise.",
+    "family_history": "Sibling with anxiety disorder.",
+    "social_history": "Artist, Master's Degree. Divorced, Lives with partner. Former smoker, quit 2 years ago.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Hypervigilant, easily startled. Restricted affect. Describes intrusive memories.",
+    "primary_diagnosis": "Post-Traumatic Stress Disorder",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Dissociative reactions (flashbacks)",
+      "Avoidance of trauma-related stimuli",
+      "Intense psychological distress to trauma cues",
+      "Distressing dreams related to the trauma",
+      "Alterations in arousal and reactivity"
+    ],
+    "icd11_code": "6B40",
+    "severity": "Moderate",
+    "duration": "1-2 years",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Trauma-Focused Cognitive Behavioral Therapy",
+      "Eye Movement Desensitization and Reprocessing (EMDR)",
+      "Prolonged Exposure Therapy",
+      "Consider SSRI medication for symptoms",
+      "Grounding and coping skills training",
+      "Support group participation"
+    ],
+    "created_date": "2025-07-13T17:18:53.880145"
+  },
+  {
+    "case_id": "ptsd_005",
+    "patient_demographics": {
+      "age": 43,
+      "gender": "Non-binary",
+      "ethnicity": "Mixed",
+      "occupation": "Retired",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Divorced",
+      "living_situation": "Lives with family"
+    },
+    "presenting_complaint": "Emotional numbness and disconnection from others",
+    "history_present_illness": "Patient is a 43-year-old Non-binary who presents with a 1 month history of symptoms that began with gradual onset. Reports the following symptoms: Alterations in arousal and reactivity, Avoidance of trauma-related stimuli, Intense psychological distress to trauma cues. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "Type 2 diabetes managed with diet and exercise.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Retired, Doctoral Degree. Divorced, Lives with family. Social alcohol use on weekends.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Hypervigilant, easily startled. Restricted affect. Describes intrusive memories.",
+    "primary_diagnosis": "Post-Traumatic Stress Disorder",
+    "secondary_diagnoses": [
+      "Social Anxiety Disorder",
+      "Insomnia Disorder"
+    ],
+    "dsm5_criteria_met": [
+      "Alterations in arousal and reactivity",
+      "Avoidance of trauma-related stimuli",
+      "Intense psychological distress to trauma cues",
+      "Dissociative reactions (flashbacks)",
+      "Negative alterations in cognition and mood",
+      "Intrusive memories or flashbacks of traumatic event",
+      "Hypervigilance and exaggerated startle response",
+      "Distressing dreams related to the trauma"
+    ],
+    "icd11_code": "6B40",
+    "severity": "Moderate",
+    "duration": "1-2 years",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Trauma-Focused Cognitive Behavioral Therapy",
+      "Eye Movement Desensitization and Reprocessing (EMDR)",
+      "Prolonged Exposure Therapy",
+      "Consider SSRI medication for symptoms",
+      "Grounding and coping skills training",
+      "Support group participation"
+    ],
+    "created_date": "2025-07-13T17:18:53.880155"
+  },
+  {
+    "case_id": "bipolar_disorder_001",
+    "patient_demographics": {
+      "age": 19,
+      "gender": "Non-binary",
+      "ethnicity": "Mixed",
+      "occupation": "Retail Worker",
+      "education_level": "High School",
+      "marital_status": "Divorced",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "History of depressive episodes alternating with mania",
+    "history_present_illness": "Patient is a 19-year-old Non-binary who presents with a 1 month history of symptoms that began with gradual onset. Reports the following symptoms: Distinct period of elevated or irritable mood, Decreased need for sleep, Flight of ideas or racing thoughts. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "No prior psychiatric treatment or hospitalizations.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Retail Worker, High School. Divorced, Homeless. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Elevated mood, grandiose. Pressured speech, flight of ideas. No psychotic symptoms.",
+    "primary_diagnosis": "Bipolar I Disorder, Most Recent Episode Manic",
+    "secondary_diagnoses": [
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+      "Social Anxiety Disorder"
+    ],
+    "dsm5_criteria_met": [
+      "Distinct period of elevated or irritable mood",
+      "Decreased need for sleep",
+      "Flight of ideas or racing thoughts",
+      "Increase in goal-directed activity",
+      "Risky behavior with potential negative consequences"
+    ],
+    "icd11_code": "6A60.0",
+    "severity": "Moderate",
+    "duration": "6-12 months",
+    "functional_impairment": "Moderate impairment affecting work attendance and family relationships.",
+    "treatment_recommendations": [
+      "Mood stabilizer medication (lithium, valproate)",
+      "Psychoeducation about bipolar disorder",
+      "Cognitive Behavioral Therapy for bipolar disorder",
+      "Sleep hygiene and routine establishment",
+      "Mood monitoring and trigger identification",
+      "Family therapy and support"
+    ],
+    "created_date": "2025-07-13T17:18:53.880165"
+  },
+  {
+    "case_id": "bipolar_disorder_002",
+    "patient_demographics": {
+      "age": 44,
+      "gender": "Male",
+      "ethnicity": "African American",
+      "occupation": "Artist",
+      "education_level": "Trade School",
+      "marital_status": "Divorced",
+      "living_situation": "Lives in assisted living"
+    },
+    "presenting_complaint": "Making impulsive decisions with money/relationships",
+    "history_present_illness": "Patient is a 44-year-old Male who presents with a 2 weeks history of symptoms that began with sudden onset. Reports the following symptoms: Risky behavior with potential negative consequences, More talkative than usual, Distractibility. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Maternal grandmother with bipolar disorder.",
+    "social_history": "Artist, Trade School. Divorced, Lives in assisted living. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Elevated mood, grandiose. Pressured speech, flight of ideas. No psychotic symptoms.",
+    "primary_diagnosis": "Bipolar I Disorder, Most Recent Episode Manic",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Risky behavior with potential negative consequences",
+      "More talkative than usual",
+      "Distractibility",
+      "Flight of ideas or racing thoughts",
+      "Increase in goal-directed activity",
+      "Increased self-esteem or grandiosity"
+    ],
+    "icd11_code": "6A60.0",
+    "severity": "Severe",
+    "duration": "1-2 years",
+    "functional_impairment": "Severe impairment requiring time off work and significant relationship strain.",
+    "treatment_recommendations": [
+      "Mood stabilizer medication (lithium, valproate)",
+      "Psychoeducation about bipolar disorder",
+      "Cognitive Behavioral Therapy for bipolar disorder",
+      "Sleep hygiene and routine establishment",
+      "Mood monitoring and trigger identification",
+      "Family therapy and support"
+    ],
+    "created_date": "2025-07-13T17:18:53.880174"
+  },
+  {
+    "case_id": "bipolar_disorder_003",
+    "patient_demographics": {
+      "age": 69,
+      "gender": "Non-binary",
+      "ethnicity": "Native American",
+      "occupation": "Self-employed",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Separated",
+      "living_situation": "Lives with roommates"
+    },
+    "presenting_complaint": "Periods of extremely high energy and mood",
+    "history_present_illness": "Patient is a 69-year-old Non-binary who presents with a 1 year history of symptoms that began with gradual onset. Reports the following symptoms: Risky behavior with potential negative consequences, Distractibility, Increased self-esteem or grandiosity. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "History of migraine headaches.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Self-employed, Doctoral Degree. Separated, Lives with roommates. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Elevated mood, grandiose. Pressured speech, flight of ideas. No psychotic symptoms.",
+    "primary_diagnosis": "Bipolar I Disorder, Most Recent Episode Manic",
+    "secondary_diagnoses": [
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood"
+    ],
+    "dsm5_criteria_met": [
+      "Risky behavior with potential negative consequences",
+      "Distractibility",
+      "Increased self-esteem or grandiosity",
+      "Increase in goal-directed activity",
+      "Flight of ideas or racing thoughts",
+      "Decreased need for sleep"
+    ],
+    "icd11_code": "6A60.0",
+    "severity": "Moderate",
+    "duration": "1-3 months",
+    "functional_impairment": "Mild to moderate impact on daily activities and social functioning.",
+    "treatment_recommendations": [
+      "Mood stabilizer medication (lithium, valproate)",
+      "Psychoeducation about bipolar disorder",
+      "Cognitive Behavioral Therapy for bipolar disorder",
+      "Sleep hygiene and routine establishment",
+      "Mood monitoring and trigger identification",
+      "Family therapy and support"
+    ],
+    "created_date": "2025-07-13T17:18:53.880184"
+  },
+  {
+    "case_id": "bipolar_disorder_004",
+    "patient_demographics": {
+      "age": 37,
+      "gender": "Non-binary",
+      "ethnicity": "Middle Eastern",
+      "occupation": "Social Worker",
+      "education_level": "Master's Degree",
+      "marital_status": "Separated",
+      "living_situation": "Lives with partner"
+    },
+    "presenting_complaint": "Racing thoughts and talking rapidly",
+    "history_present_illness": "Patient is a 37-year-old Non-binary who presents with a 3 months history of symptoms that began with sudden onset. Reports the following symptoms: Increased self-esteem or grandiosity, Distractibility, Risky behavior with potential negative consequences. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "History of anxiety treated with medication in the past.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Maternal grandmother with bipolar disorder.",
+    "social_history": "Social Worker, Master's Degree. Separated, Lives with partner. Denies tobacco, alcohol, or illicit drug use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Elevated mood, grandiose. Pressured speech, flight of ideas. No psychotic symptoms.",
+    "primary_diagnosis": "Bipolar I Disorder, Most Recent Episode Manic",
+    "secondary_diagnoses": [
+      "Insomnia Disorder"
+    ],
+    "dsm5_criteria_met": [
+      "Increased self-esteem or grandiosity",
+      "Distractibility",
+      "Risky behavior with potential negative consequences",
+      "Flight of ideas or racing thoughts",
+      "Decreased need for sleep",
+      "Increase in goal-directed activity"
+    ],
+    "icd11_code": "6A60.0",
+    "severity": "Mild",
+    "duration": "Over 2 years",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Mood stabilizer medication (lithium, valproate)",
+      "Psychoeducation about bipolar disorder",
+      "Cognitive Behavioral Therapy for bipolar disorder",
+      "Sleep hygiene and routine establishment",
+      "Mood monitoring and trigger identification",
+      "Family therapy and support"
+    ],
+    "created_date": "2025-07-13T17:18:53.880193"
+  },
+  {
+    "case_id": "bipolar_disorder_005",
+    "patient_demographics": {
+      "age": 72,
+      "gender": "Non-binary",
+      "ethnicity": "Hispanic/Latino",
+      "occupation": "Self-employed",
+      "education_level": "Some College",
+      "marital_status": "Widowed",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "Periods of extremely high energy and mood",
+    "history_present_illness": "Patient is a 72-year-old Non-binary who presents with a 2 weeks history of symptoms that began with sudden onset. Reports the following symptoms: Distractibility, Distinct period of elevated or irritable mood, Increase in goal-directed activity. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "History of anxiety treated with medication in the past.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "No known family history of mental illness.",
+    "social_history": "Self-employed, Some College. Widowed, Homeless. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Elevated mood, grandiose. Pressured speech, flight of ideas. No psychotic symptoms.",
+    "primary_diagnosis": "Bipolar I Disorder, Most Recent Episode Manic",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Distractibility",
+      "Distinct period of elevated or irritable mood",
+      "Increase in goal-directed activity",
+      "Risky behavior with potential negative consequences",
+      "Increased self-esteem or grandiosity",
+      "Decreased need for sleep",
+      "More talkative than usual"
+    ],
+    "icd11_code": "6A60.0",
+    "severity": "Mild",
+    "duration": "1-2 years",
+    "functional_impairment": "Severe impairment requiring time off work and significant relationship strain.",
+    "treatment_recommendations": [
+      "Mood stabilizer medication (lithium, valproate)",
+      "Psychoeducation about bipolar disorder",
+      "Cognitive Behavioral Therapy for bipolar disorder",
+      "Sleep hygiene and routine establishment",
+      "Mood monitoring and trigger identification",
+      "Family therapy and support"
+    ],
+    "created_date": "2025-07-13T17:18:53.880204"
+  },
+  {
+    "case_id": "adhd_001",
+    "patient_demographics": {
+      "age": 61,
+      "gender": "Non-binary",
+      "ethnicity": "Asian",
+      "occupation": "Social Worker",
+      "education_level": "Trade School",
+      "marital_status": "Separated",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "Interrupting others in conversations",
+    "history_present_illness": "Patient is a 61-year-old Non-binary who presents with a 1 year history of symptoms that began with gradual onset. Reports the following symptoms: Easily distracted by extraneous stimuli, Difficulty sustaining attention in tasks, Fidgets or squirms in seat. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Previous episode of depression treated with therapy 2 years ago.",
+    "past_medical_history": "No significant medical history.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Social Worker, Trade School. Separated, Homeless. Social alcohol use on weekends.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Restless, difficulty sitting still. Distractible during interview. Mood euthymic.",
+    "primary_diagnosis": "Attention-Deficit/Hyperactivity Disorder, Combined Presentation",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Easily distracted by extraneous stimuli",
+      "Difficulty sustaining attention in tasks",
+      "Fidgets or squirms in seat",
+      "Difficulty waiting turn in conversations",
+      "Careless mistakes in work or activities"
+    ],
+    "icd11_code": "6A05.0",
+    "severity": "Mild",
+    "duration": "6-12 months",
+    "functional_impairment": "Moderate impairment affecting work attendance and family relationships.",
+    "treatment_recommendations": [
+      "Stimulant medication evaluation",
+      "Cognitive Behavioral Therapy for ADHD",
+      "Organizational skills training",
+      "Time management strategies",
+      "Environmental modifications",
+      "Mindfulness and attention training"
+    ],
+    "created_date": "2025-07-13T17:18:53.880213"
+  },
+  {
+    "case_id": "adhd_002",
+    "patient_demographics": {
+      "age": 50,
+      "gender": "Male",
+      "ethnicity": "Native American",
+      "occupation": "Manager",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Divorced",
+      "living_situation": "Lives in assisted living"
+    },
+    "presenting_complaint": "Procrastinating on important tasks",
+    "history_present_illness": "Patient is a 50-year-old Male who presents with a 6 months history of symptoms that began with following stressful event onset. Reports the following symptoms: Difficulty sustaining attention in tasks, Easily distracted by extraneous stimuli, Loses things necessary for tasks. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "Type 2 diabetes managed with diet and exercise.",
+    "family_history": "Father with alcohol use disorder.",
+    "social_history": "Manager, Doctoral Degree. Divorced, Lives in assisted living. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Restless, difficulty sitting still. Distractible during interview. Mood euthymic.",
+    "primary_diagnosis": "Attention-Deficit/Hyperactivity Disorder, Combined Presentation",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Difficulty sustaining attention in tasks",
+      "Easily distracted by extraneous stimuli",
+      "Loses things necessary for tasks",
+      "Fidgets or squirms in seat",
+      "Difficulty waiting turn in conversations"
+    ],
+    "icd11_code": "6A05.0",
+    "severity": "Severe",
+    "duration": "6-12 months",
+    "functional_impairment": "Mild to moderate impact on daily activities and social functioning.",
+    "treatment_recommendations": [
+      "Stimulant medication evaluation",
+      "Cognitive Behavioral Therapy for ADHD",
+      "Organizational skills training",
+      "Time management strategies",
+      "Environmental modifications",
+      "Mindfulness and attention training"
+    ],
+    "created_date": "2025-07-13T17:18:53.880222"
+  },
+  {
+    "case_id": "adhd_003",
+    "patient_demographics": {
+      "age": 53,
+      "gender": "Non-binary",
+      "ethnicity": "Middle Eastern",
+      "occupation": "Lawyer",
+      "education_level": "Trade School",
+      "marital_status": "Married",
+      "living_situation": "Lives with roommates"
+    },
+    "presenting_complaint": "Difficulty concentrating at work/school",
+    "history_present_illness": "Patient is a 53-year-old Non-binary who presents with a 3 months history of symptoms that began with sudden onset. Reports the following symptoms: Fidgets or squirms in seat, Difficulty waiting turn in conversations, Easily distracted by extraneous stimuli. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "One psychiatric hospitalization 5 years ago.",
+    "past_medical_history": "No significant medical history.",
+    "family_history": "No known family history of mental illness.",
+    "social_history": "Lawyer, Trade School. Married, Lives with roommates. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Restless, difficulty sitting still. Distractible during interview. Mood euthymic.",
+    "primary_diagnosis": "Attention-Deficit/Hyperactivity Disorder, Combined Presentation",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Fidgets or squirms in seat",
+      "Difficulty waiting turn in conversations",
+      "Easily distracted by extraneous stimuli",
+      "Careless mistakes in work or activities",
+      "Difficulty organizing tasks and activities",
+      "Difficulty sustaining attention in tasks",
+      "Loses things necessary for tasks",
+      "Avoids tasks requiring sustained mental effort"
+    ],
+    "icd11_code": "6A05.0",
+    "severity": "Severe",
+    "duration": "3-6 months",
+    "functional_impairment": "Mild to moderate impact on daily activities and social functioning.",
+    "treatment_recommendations": [
+      "Stimulant medication evaluation",
+      "Cognitive Behavioral Therapy for ADHD",
+      "Organizational skills training",
+      "Time management strategies",
+      "Environmental modifications",
+      "Mindfulness and attention training"
+    ],
+    "created_date": "2025-07-13T17:18:53.880231"
+  },
+  {
+    "case_id": "adhd_004",
+    "patient_demographics": {
+      "age": 62,
+      "gender": "Non-binary",
+      "ethnicity": "Mixed",
+      "occupation": "Manager",
+      "education_level": "Master's Degree",
+      "marital_status": "Married",
+      "living_situation": "Lives with children"
+    },
+    "presenting_complaint": "Interrupting others in conversations",
+    "history_present_illness": "Patient is a 62-year-old Non-binary who presents with a 3 months history of symptoms that began with sudden onset. Reports the following symptoms: Careless mistakes in work or activities, Difficulty sustaining attention in tasks, Difficulty waiting turn in conversations. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Sibling with anxiety disorder.",
+    "social_history": "Manager, Master's Degree. Married, Lives with children. Former smoker, quit 2 years ago.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Restless, difficulty sitting still. Distractible during interview. Mood euthymic.",
+    "primary_diagnosis": "Attention-Deficit/Hyperactivity Disorder, Combined Presentation",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Careless mistakes in work or activities",
+      "Difficulty sustaining attention in tasks",
+      "Difficulty waiting turn in conversations",
+      "Difficulty organizing tasks and activities",
+      "Easily distracted by extraneous stimuli",
+      "Loses things necessary for tasks",
+      "Avoids tasks requiring sustained mental effort",
+      "Fidgets or squirms in seat"
+    ],
+    "icd11_code": "6A05.0",
+    "severity": "Severe",
+    "duration": "6-12 months",
+    "functional_impairment": "Mild impairment in work performance and social relationships.",
+    "treatment_recommendations": [
+      "Stimulant medication evaluation",
+      "Cognitive Behavioral Therapy for ADHD",
+      "Organizational skills training",
+      "Time management strategies",
+      "Environmental modifications",
+      "Mindfulness and attention training"
+    ],
+    "created_date": "2025-07-13T17:18:53.880241"
+  },
+  {
+    "case_id": "adhd_005",
+    "patient_demographics": {
+      "age": 19,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "occupation": "Student",
+      "education_level": "Trade School",
+      "marital_status": "Divorced",
+      "living_situation": "Lives in assisted living"
+    },
+    "presenting_complaint": "Procrastinating on important tasks",
+    "history_present_illness": "Patient is a 19-year-old Female who presents with a 3 months history of symptoms that began with gradual onset. Reports the following symptoms: Difficulty waiting turn in conversations, Difficulty organizing tasks and activities, Difficulty sustaining attention in tasks. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Previous episode of depression treated with therapy 2 years ago.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "No known family history of mental illness.",
+    "social_history": "Student, Trade School. Divorced, Lives in assisted living. Social alcohol use on weekends.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Restless, difficulty sitting still. Distractible during interview. Mood euthymic.",
+    "primary_diagnosis": "Attention-Deficit/Hyperactivity Disorder, Combined Presentation",
+    "secondary_diagnoses": [
+      "Social Anxiety Disorder"
+    ],
+    "dsm5_criteria_met": [
+      "Difficulty waiting turn in conversations",
+      "Difficulty organizing tasks and activities",
+      "Difficulty sustaining attention in tasks",
+      "Easily distracted by extraneous stimuli",
+      "Fidgets or squirms in seat"
+    ],
+    "icd11_code": "6A05.0",
+    "severity": "Severe",
+    "duration": "1-2 years",
+    "functional_impairment": "Mild to moderate impact on daily activities and social functioning.",
+    "treatment_recommendations": [
+      "Stimulant medication evaluation",
+      "Cognitive Behavioral Therapy for ADHD",
+      "Organizational skills training",
+      "Time management strategies",
+      "Environmental modifications",
+      "Mindfulness and attention training"
+    ],
+    "created_date": "2025-07-13T17:18:53.880251"
+  },
+  {
+    "case_id": "ocd_001",
+    "patient_demographics": {
+      "age": 52,
+      "gender": "Non-binary",
+      "ethnicity": "Caucasian",
+      "occupation": "Retired",
+      "education_level": "Some College",
+      "marital_status": "Separated",
+      "living_situation": "Lives with family"
+    },
+    "presenting_complaint": "Intrusive thoughts that won't go away",
+    "history_present_illness": "Patient is a 52-year-old Non-binary who presents with a 2 weeks history of symptoms that began with gradual onset. Reports the following symptoms: Thoughts cause marked anxiety or distress, Obsessions or compulsions are time-consuming, Recurrent and persistent obsessive thoughts. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "History of anxiety treated with medication in the past.",
+    "past_medical_history": "Asthma, uses rescue inhaler as needed.",
+    "family_history": "Maternal grandmother with bipolar disorder.",
+    "social_history": "Retired, Some College. Separated, Lives with family. Social alcohol use on weekends.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious appearance. Describes intrusive thoughts. Insight intact regarding symptoms.",
+    "primary_diagnosis": "Obsessive-Compulsive Disorder",
+    "secondary_diagnoses": [
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood"
+    ],
+    "dsm5_criteria_met": [
+      "Thoughts cause marked anxiety or distress",
+      "Obsessions or compulsions are time-consuming",
+      "Recurrent and persistent obsessive thoughts",
+      "Significant distress or impairment in functioning",
+      "Compulsions aimed at reducing anxiety",
+      "Repetitive behaviors or mental acts (compulsions)",
+      "Insight that obsessions/compulsions are excessive",
+      "Attempts to suppress or ignore obsessions"
+    ],
+    "icd11_code": "6B20",
+    "severity": "Severe",
+    "duration": "3-6 months",
+    "functional_impairment": "Severe impairment requiring time off work and significant relationship strain.",
+    "treatment_recommendations": [
+      "Exposure and Response Prevention (ERP)",
+      "Cognitive Behavioral Therapy for OCD",
+      "SSRI medication with higher doses",
+      "Mindfulness-based approaches",
+      "Family education and support",
+      "Gradual exposure hierarchy development"
+    ],
+    "created_date": "2025-07-13T17:18:53.880262"
+  },
+  {
+    "case_id": "ocd_002",
+    "patient_demographics": {
+      "age": 56,
+      "gender": "Non-binary",
+      "ethnicity": "Native American",
+      "occupation": "Self-employed",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Separated",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "Distress when unable to perform compulsions",
+    "history_present_illness": "Patient is a 56-year-old Non-binary who presents with a 2 weeks history of symptoms that began with gradual onset. Reports the following symptoms: Repetitive behaviors or mental acts (compulsions), Significant distress or impairment in functioning, Obsessions or compulsions are time-consuming. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Previous episode of depression treated with therapy 2 years ago.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "Mother with history of depression.",
+    "social_history": "Self-employed, Doctoral Degree. Separated, Homeless. Denies tobacco, alcohol, or illicit drug use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious appearance. Describes intrusive thoughts. Insight intact regarding symptoms.",
+    "primary_diagnosis": "Obsessive-Compulsive Disorder",
+    "secondary_diagnoses": [
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood",
+      "Caffeine Use Disorder, Mild"
+    ],
+    "dsm5_criteria_met": [
+      "Repetitive behaviors or mental acts (compulsions)",
+      "Significant distress or impairment in functioning",
+      "Obsessions or compulsions are time-consuming",
+      "Compulsions aimed at reducing anxiety",
+      "Attempts to suppress or ignore obsessions"
+    ],
+    "icd11_code": "6B20",
+    "severity": "Moderate",
+    "duration": "3-6 months",
+    "functional_impairment": "Severe impairment requiring time off work and significant relationship strain.",
+    "treatment_recommendations": [
+      "Exposure and Response Prevention (ERP)",
+      "Cognitive Behavioral Therapy for OCD",
+      "SSRI medication with higher doses",
+      "Mindfulness-based approaches",
+      "Family education and support",
+      "Gradual exposure hierarchy development"
+    ],
+    "created_date": "2025-07-13T17:18:53.880271"
+  },
+  {
+    "case_id": "ocd_003",
+    "patient_demographics": {
+      "age": 71,
+      "gender": "Male",
+      "ethnicity": "Caucasian",
+      "occupation": "Engineer",
+      "education_level": "Master's Degree",
+      "marital_status": "Divorced",
+      "living_situation": "Homeless"
+    },
+    "presenting_complaint": "Significant time spent on ritualistic behaviors",
+    "history_present_illness": "Patient is a 71-year-old Male who presents with a 1 year history of symptoms that began with sudden onset. Reports the following symptoms: Recurrent and persistent obsessive thoughts, Thoughts cause marked anxiety or distress, Compulsions aimed at reducing anxiety. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "History of hypertension, well-controlled on medication.",
+    "family_history": "Maternal grandmother with bipolar disorder.",
+    "social_history": "Engineer, Master's Degree. Divorced, Homeless. Former smoker, quit 2 years ago.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious appearance. Describes intrusive thoughts. Insight intact regarding symptoms.",
+    "primary_diagnosis": "Obsessive-Compulsive Disorder",
+    "secondary_diagnoses": [
+      "Adjustment Disorder with Mixed Anxiety and Depressed Mood"
+    ],
+    "dsm5_criteria_met": [
+      "Recurrent and persistent obsessive thoughts",
+      "Thoughts cause marked anxiety or distress",
+      "Compulsions aimed at reducing anxiety",
+      "Obsessions or compulsions are time-consuming",
+      "Insight that obsessions/compulsions are excessive"
+    ],
+    "icd11_code": "6B20",
+    "severity": "Mild",
+    "duration": "6-12 months",
+    "functional_impairment": "Severe impairment requiring time off work and significant relationship strain.",
+    "treatment_recommendations": [
+      "Exposure and Response Prevention (ERP)",
+      "Cognitive Behavioral Therapy for OCD",
+      "SSRI medication with higher doses",
+      "Mindfulness-based approaches",
+      "Family education and support",
+      "Gradual exposure hierarchy development"
+    ],
+    "created_date": "2025-07-13T17:18:53.880281"
+  },
+  {
+    "case_id": "ocd_004",
+    "patient_demographics": {
+      "age": 30,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "occupation": "Student",
+      "education_level": "Trade School",
+      "marital_status": "Separated",
+      "living_situation": "Lives with partner"
+    },
+    "presenting_complaint": "Significant time spent on ritualistic behaviors",
+    "history_present_illness": "Patient is a 30-year-old Female who presents with a 3 months history of symptoms that began with following stressful event onset. Reports the following symptoms: Recurrent and persistent obsessive thoughts, Thoughts cause marked anxiety or distress, Attempts to suppress or ignore obsessions. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "History of anxiety treated with medication in the past.",
+    "past_medical_history": "History of migraine headaches.",
+    "family_history": "Sibling with anxiety disorder.",
+    "social_history": "Student, Trade School. Separated, Lives with partner. Occasional marijuana use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious appearance. Describes intrusive thoughts. Insight intact regarding symptoms.",
+    "primary_diagnosis": "Obsessive-Compulsive Disorder",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Recurrent and persistent obsessive thoughts",
+      "Thoughts cause marked anxiety or distress",
+      "Attempts to suppress or ignore obsessions",
+      "Compulsions aimed at reducing anxiety",
+      "Repetitive behaviors or mental acts (compulsions)"
+    ],
+    "icd11_code": "6B20",
+    "severity": "Severe",
+    "duration": "1-2 years",
+    "functional_impairment": "Mild to moderate impact on daily activities and social functioning.",
+    "treatment_recommendations": [
+      "Exposure and Response Prevention (ERP)",
+      "Cognitive Behavioral Therapy for OCD",
+      "SSRI medication with higher doses",
+      "Mindfulness-based approaches",
+      "Family education and support",
+      "Gradual exposure hierarchy development"
+    ],
+    "created_date": "2025-07-13T17:18:53.880291"
+  },
+  {
+    "case_id": "ocd_005",
+    "patient_demographics": {
+      "age": 22,
+      "gender": "Female",
+      "ethnicity": "African American",
+      "occupation": "Student",
+      "education_level": "Doctoral Degree",
+      "marital_status": "Married",
+      "living_situation": "Lives with partner"
+    },
+    "presenting_complaint": "Excessive checking, cleaning, or counting",
+    "history_present_illness": "Patient is a 22-year-old Female who presents with a 1 month history of symptoms that began with following stressful event onset. Reports the following symptoms: Repetitive behaviors or mental acts (compulsions), Obsessions or compulsions are time-consuming, Attempts to suppress or ignore obsessions. Symptoms have been progressively worsening and significantly impacting daily functioning.",
+    "past_psychiatric_history": "Family therapy during adolescence for behavioral issues.",
+    "past_medical_history": "Type 2 diabetes managed with diet and exercise.",
+    "family_history": "Mother with history of depression.",
+    "social_history": "Student, Doctoral Degree. Married, Lives with partner. Denies tobacco, alcohol, or illicit drug use.",
+    "mental_status_exam": "Alert and oriented x3. Cooperative with interview. Anxious appearance. Describes intrusive thoughts. Insight intact regarding symptoms.",
+    "primary_diagnosis": "Obsessive-Compulsive Disorder",
+    "secondary_diagnoses": [],
+    "dsm5_criteria_met": [
+      "Repetitive behaviors or mental acts (compulsions)",
+      "Obsessions or compulsions are time-consuming",
+      "Attempts to suppress or ignore obsessions",
+      "Significant distress or impairment in functioning",
+      "Thoughts cause marked anxiety or distress",
+      "Recurrent and persistent obsessive thoughts",
+      "Compulsions aimed at reducing anxiety",
+      "Insight that obsessions/compulsions are excessive"
+    ],
+    "icd11_code": "6B20",
+    "severity": "Moderate",
+    "duration": "2-4 weeks",
+    "functional_impairment": "Moderate impairment affecting work attendance and family relationships.",
+    "treatment_recommendations": [
+      "Exposure and Response Prevention (ERP)",
+      "Cognitive Behavioral Therapy for OCD",
+      "SSRI medication with higher doses",
+      "Mindfulness-based approaches",
+      "Family education and support",
+      "Gradual exposure hierarchy development"
+    ],
+    "created_date": "2025-07-13T17:18:53.880301"
+  }
+]
