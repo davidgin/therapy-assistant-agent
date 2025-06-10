@@ -89,6 +89,20 @@ secrets.json
 *.pem
 *.key
 
+# Assistant files
+.assistant/
+assistant_files/
+*.assistant
+.assistant_session
+assistant_session.json
+assistant_context.json
+assistant_workspace.json
+.assistant_workspace
+assistant_memory.json
+.assistant_memory
+CLAUDE_*
+.CLAUDE_*
+
 # Documentation builds
 docs/_build/
 site/
