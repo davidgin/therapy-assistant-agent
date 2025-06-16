@@ -1,0 +1,158 @@
+[
+  {
+    "text": "Major Depressive Disorder (MDD) requires the presence of 5 or more symptoms during a 2-week period, with at least one symptom being either depressed mood or loss of interest/pleasure. Symptoms include: depressed mood most of the day, markedly diminished interest in activities, significant weight loss/gain, insomnia or hypersomnia, psychomotor agitation or retardation, fatigue, feelings of worthlessness or guilt, diminished concentration, and recurrent thoughts of death.",
+    "type": "dsm5_criteria",
+    "disorder": "Major Depressive Disorder",
+    "code": "296.2x",
+    "icd11_code": "6A70.1",
+    "category": "Depressive Disorders"
+  },
+  {
+    "text": "Cognitive Behavioral Therapy (CBT) for depression is highly effective with strong empirical support. Treatment typically involves 16-20 weekly sessions focusing on identifying and modifying negative thought patterns and behavioral activation. CBT has comparable efficacy to antidepressant medication for moderate depression and superior long-term outcomes in preventing relapse.",
+    "type": "treatment_guideline",
+    "disorder": "Major Depressive Disorder",
+    "treatment": "Cognitive Behavioral Therapy",
+    "evidence_level": "A",
+    "source": "APA Clinical Practice Guidelines"
+  },
+  {
+    "text": "Generalized Anxiety Disorder (GAD) is characterized by excessive anxiety and worry about multiple events or activities for at least 6 months. The worry is difficult to control and associated with 3 or more symptoms: restlessness, being easily fatigued, difficulty concentrating, irritability, muscle tension, and sleep disturbance. Symptoms cause clinically significant distress or impairment.",
+    "type": "dsm5_criteria", 
+    "disorder": "Generalized Anxiety Disorder",
+    "code": "300.02",
+    "icd11_code": "6B00",
+    "category": "Anxiety Disorders"
+  },
+  {
+    "text": "Cognitive Behavioral Therapy for GAD focuses on worry management through cognitive restructuring, relaxation training, and exposure to avoided situations. Treatment duration is typically 12-16 sessions. CBT for GAD shows large effect sizes and maintains gains at follow-up. Mindfulness-based approaches can be integrated for enhanced outcomes.",
+    "type": "treatment_guideline",
+    "disorder": "Generalized Anxiety Disorder", 
+    "treatment": "Cognitive Behavioral Therapy",
+    "evidence_level": "A",
+    "source": "Cochrane Reviews"
+  },
+  {
+    "text": "Post-Traumatic Stress Disorder (PTSD) develops following exposure to actual or threatened death, serious injury, or sexual violence. Core symptoms include: intrusive memories/flashbacks, avoidance of trauma-related stimuli, negative alterations in cognition and mood, and alterations in arousal and reactivity. Symptoms must persist for more than 1 month and cause significant distress or impairment.",
+    "type": "dsm5_criteria",
+    "disorder": "Post-Traumatic Stress Disorder",
+    "code": "309.81",
+    "icd11_code": "6B40",
+    "category": "Trauma and Stressor-Related Disorders"
+  },
+  {
+    "text": "Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) is the gold standard treatment for PTSD. Key components include psychoeducation, cognitive restructuring, imaginal and in-vivo exposure, and relapse prevention. Treatment typically requires 12-16 sessions. EMDR (Eye Movement Desensitization and Reprocessing) is also highly effective with similar outcomes to TF-CBT.",
+    "type": "treatment_guideline",
+    "disorder": "Post-Traumatic Stress Disorder",
+    "treatment": "Trauma-Focused CBT",
+    "evidence_level": "A",
+    "source": "VA/DoD Clinical Practice Guidelines"
+  },
+  {
+    "text": "Bipolar I Disorder is defined by the occurrence of at least one manic episode. A manic episode is a distinct period of abnormally elevated, expansive, or irritable mood lasting at least 1 week, with 3 or more symptoms: inflated self-esteem, decreased need for sleep, more talkative, flight of ideas, distractibility, increased goal-directed activity, and excessive involvement in risky activities.",
+    "type": "dsm5_criteria",
+    "disorder": "Bipolar I Disorder",
+    "code": "296.4x",
+    "icd11_code": "6A60",
+    "category": "Bipolar and Related Disorders"
+  },
+  {
+    "text": "Mood stabilizers are first-line treatment for bipolar disorder. Lithium remains the gold standard with anti-suicide effects. Valproate and carbamazepine are alternatives. Adjunctive psychotherapy (CBT, psychoeducation, family therapy) significantly improves outcomes. Long-term maintenance treatment is essential to prevent recurrence.",
+    "type": "treatment_guideline",
+    "disorder": "Bipolar I Disorder",
+    "treatment": "Mood Stabilizers",
+    "evidence_level": "A", 
+    "source": "International Society for Bipolar Disorders"
+  },
+  {
+    "text": "Attention-Deficit/Hyperactivity Disorder (ADHD) requires a persistent pattern of inattention and/or hyperactivity-impulsivity that interferes with functioning. Symptoms must be present before age 12, occur in multiple settings, and not be better explained by another disorder. For diagnosis, 6+ symptoms of inattention or hyperactivity-impulsivity are required (5+ for adults).",
+    "type": "dsm5_criteria",
+    "disorder": "ADHD",
+    "code": "314.0x",
+    "icd11_code": "6A05",
+    "category": "Neurodevelopmental Disorders"
+  },
+  {
+    "text": "Multimodal treatment for ADHD combines behavioral interventions and medication. For preschoolers, behavioral parent training is first-line. For school-age children, stimulant medications (methylphenidate, amphetamines) combined with behavioral interventions show optimal outcomes. School-based interventions and accommodations are essential components.",
+    "type": "treatment_guideline",
+    "disorder": "ADHD",
+    "treatment": "Multimodal Treatment",
+    "evidence_level": "A",
+    "source": "AAP Clinical Practice Guidelines"
+  },
+  {
+    "text": "Obsessive-Compulsive Disorder (OCD) involves obsessions (recurrent, intrusive thoughts) and/or compulsions (repetitive behaviors or mental acts). Obsessions cause marked anxiety, and compulsions are performed to reduce distress. Symptoms are time-consuming (>1 hour/day) or cause significant impairment. The person recognizes obsessions/compulsions are excessive or unreasonable.",
+    "type": "dsm5_criteria",
+    "disorder": "Obsessive-Compulsive Disorder",
+    "code": "300.3",
+    "icd11_code": "6B20",
+    "category": "Obsessive-Compulsive and Related Disorders"
+  },
+  {
+    "text": "Exposure and Response Prevention (ERP) is the gold standard psychotherapy for OCD. Treatment involves gradual exposure to obsession-triggering situations while preventing compulsive responses. Combined with SSRIs (especially clomipramine, fluoxetine, sertraline), treatment response rates reach 60-80%. Higher doses of SSRIs are typically required compared to depression treatment.",
+    "type": "treatment_guideline",
+    "disorder": "Obsessive-Compulsive Disorder",
+    "treatment": "Exposure and Response Prevention",
+    "evidence_level": "A",
+    "source": "International OCD Foundation Guidelines"
+  },
+  {
+    "text": "Panic Disorder involves recurrent unexpected panic attacks followed by persistent concern about additional attacks or maladaptive changes in behavior. Panic attacks peak within minutes and include symptoms like palpitations, sweating, trembling, shortness of breath, choking sensations, chest pain, nausea, dizziness, and fear of dying or losing control.",
+    "type": "dsm5_criteria",
+    "disorder": "Panic Disorder",
+    "code": "300.01",
+    "icd11_code": "6B01",
+    "category": "Anxiety Disorders"
+  },
+  {
+    "text": "CBT for panic disorder focuses on cognitive restructuring of catastrophic interpretations and interoceptive exposure to feared bodily sensations. Treatment typically involves 12-16 sessions with strong empirical support. SSRIs are also effective, with paroxetine and sertraline having specific FDA approval for panic disorder.",
+    "type": "treatment_guideline",
+    "disorder": "Panic Disorder",
+    "treatment": "Cognitive Behavioral Therapy",
+    "evidence_level": "A",
+    "source": "Cochrane Reviews"
+  },
+  {
+    "text": "Social Anxiety Disorder (Social Phobia) involves marked fear or anxiety about social situations where the person may be scrutinized. The fear is persistent (typically 6+ months), causes distress or impairment, and leads to avoidance. Physical symptoms may include blushing, trembling, sweating, or nausea in social situations.",
+    "type": "dsm5_criteria",
+    "disorder": "Social Anxiety Disorder",
+    "code": "300.23",
+    "icd11_code": "6B04",
+    "category": "Anxiety Disorders"
+  },
+  {
+    "text": "CBT for social anxiety disorder includes cognitive restructuring, behavioral experiments, and graduated exposure to feared social situations. Group CBT format can be particularly effective. SSRIs (particularly sertraline and paroxetine) and SNRIs show good efficacy. Beta-blockers may help with performance anxiety in specific situations.",
+    "type": "treatment_guideline",
+    "disorder": "Social Anxiety Disorder", 
+    "treatment": "Cognitive Behavioral Therapy",
+    "evidence_level": "A",
+    "source": "NICE Guidelines"
+  },
+  {
+    "text": "Risk assessment in mental health involves evaluating suicide risk, self-harm risk, violence risk, and functional impairment. Key factors include: current ideation/intent/plan, past attempts, psychiatric symptoms, substance use, social support, access to means, and protective factors. Documentation should be thorough and risk management plans implemented.",
+    "type": "clinical_guideline",
+    "disorder": "General",
+    "category": "Risk Assessment",
+    "source": "APA Practice Guidelines"
+  },
+  {
+    "text": "Cultural formulation should consider cultural identity, cultural explanations of illness, cultural factors related to psychosocial environment and functioning, cultural features of clinician-patient relationship, and overall cultural assessment for diagnosis and care. This enhances diagnostic accuracy and treatment engagement.",
+    "type": "clinical_guideline",
+    "disorder": "General",
+    "category": "Cultural Considerations",
+    "source": "DSM-5-TR Cultural Formulation"
+  },
+  {
+    "text": "Therapeutic alliance is one of the strongest predictors of treatment outcome across all psychotherapy modalities. Key components include agreement on therapy goals, agreement on therapy tasks, and the emotional bond between therapist and client. Regular monitoring and repair of alliance ruptures improves outcomes.",
+    "type": "clinical_guideline",
+    "disorder": "General",
+    "category": "Therapeutic Process",
+    "source": "Psychotherapy Research Literature"
+  },
+  {
+    "text": "Evidence-based practice in psychology integrates the best research evidence with clinical expertise and patient values. Treatment selection should consider empirical support, client characteristics and preferences, cultural factors, and clinical judgment. Regular outcome monitoring enhances treatment effectiveness.",
+    "type": "clinical_guideline",
+    "disorder": "General",
+    "category": "Evidence-Based Practice",
+    "source": "APA Presidential Task Force"
+  }
+]

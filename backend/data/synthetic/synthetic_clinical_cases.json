@@ -1,0 +1,206 @@
+[
+  {
+    "case_id": "CASE_001",
+    "patient_demographics": {
+      "age": 28,
+      "gender": "Female",
+      "occupation": "Software Engineer"
+    },
+    "presenting_symptoms": [
+      "Persistent sadness for 3 weeks",
+      "Loss of interest in activities",
+      "Difficulty concentrating at work",
+      "Sleep disturbances (early morning awakening)",
+      "Fatigue and low energy",
+      "Feelings of worthlessness"
+    ],
+    "clinical_history": "No prior psychiatric history. Recent job loss 4 weeks ago. Family history of depression (mother).",
+    "assessment_notes": "Meets criteria for Major Depressive Episode. GAF score: 55. PHQ-9 score: 16 (moderate-severe depression).",
+    "suggested_diagnosis": {
+      "primary": "Major Depressive Disorder, Single Episode",
+      "dsm5_code": "296.22",
+      "icd11_code": "6A70.1",
+      "confidence": 0.85
+    },
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy (CBT) - 16-20 sessions",
+      "Consider SSRI if no improvement in 4-6 weeks",
+      "Behavioral activation techniques",
+      "Sleep hygiene education",
+      "Regular follow-up appointments"
+    ],
+    "severity": "Moderate",
+    "risk_factors": ["Job loss", "Family history", "Social isolation"],
+    "protective_factors": ["Strong family support", "No substance use", "Motivated for treatment"]
+  },
+  {
+    "case_id": "CASE_002", 
+    "patient_demographics": {
+      "age": 35,
+      "gender": "Male",
+      "occupation": "Teacher"
+    },
+    "presenting_symptoms": [
+      "Excessive worry about multiple life areas for 8 months",
+      "Restlessness and feeling on edge",
+      "Muscle tension, especially in shoulders",
+      "Difficulty falling asleep",
+      "Irritability with family members",
+      "Concentration problems at work"
+    ],
+    "clinical_history": "Previous episode of anxiety 5 years ago, resolved with therapy. No substance use. High-stress work environment.",
+    "assessment_notes": "GAD-7 score: 14 (severe anxiety). Meets criteria for Generalized Anxiety Disorder.",
+    "suggested_diagnosis": {
+      "primary": "Generalized Anxiety Disorder",
+      "dsm5_code": "300.02",
+      "icd11_code": "6B00",
+      "confidence": 0.90
+    },
+    "treatment_recommendations": [
+      "Cognitive Behavioral Therapy focusing on worry management",
+      "Progressive muscle relaxation training",
+      "Mindfulness-based stress reduction",
+      "Consider SSRI/SNRI if therapy insufficient",
+      "Stress management techniques"
+    ],
+    "severity": "Moderate to Severe",
+    "risk_factors": ["Work stress", "Previous anxiety episode"],
+    "protective_factors": ["Previous successful therapy", "Stable relationship", "Good insight"]
+  },
+  {
+    "case_id": "CASE_003",
+    "patient_demographics": {
+      "age": 42,
+      "gender": "Female", 
+      "occupation": "Nurse"
+    },
+    "presenting_symptoms": [
+      "Recurrent nightmares about car accident 6 months ago",
+      "Avoiding driving and being passenger in cars",
+      "Hypervigilance when outside",
+      "Intrusive memories of the accident",
+      "Emotional numbing with family",
+      "Startled response to loud noises"
+    ],
+    "clinical_history": "Motor vehicle accident 6 months ago with minor injuries. No prior trauma or psychiatric history.",
+    "assessment_notes": "PCL-5 score: 52 (severe PTSD symptoms). Meets full criteria for PTSD.",
+    "suggested_diagnosis": {
+      "primary": "Post-Traumatic Stress Disorder",
+      "dsm5_code": "309.81",
+      "icd11_code": "6B40",
+      "confidence": 0.95
+    },
+    "treatment_recommendations": [
+      "Trauma-Focused Cognitive Behavioral Therapy",
+      "EMDR (Eye Movement Desensitization and Reprocessing)",
+      "Prolonged Exposure therapy",
+      "Consider Prazosin for nightmares",
+      "Gradual exposure to driving"
+    ],
+    "severity": "Severe",
+    "risk_factors": ["Healthcare worker stress", "Ongoing avoidance"],
+    "protective_factors": ["Strong work ethic", "Supportive colleagues", "No substance use"]
+  },
+  {
+    "case_id": "CASE_004",
+    "patient_demographics": {
+      "age": 29,
+      "gender": "Male",
+      "occupation": "Marketing Manager"
+    },
+    "presenting_symptoms": [
+      "Elevated mood lasting 5 days",
+      "Decreased need for sleep (3-4 hours)",
+      "Increased goal-directed activity",
+      "Grandiose beliefs about business ideas",
+      "Rapid speech and racing thoughts",
+      "Poor judgment (excessive spending)"
+    ],
+    "clinical_history": "Previous manic episode 2 years ago. Family history of bipolar disorder (father). Good medication compliance until 3 months ago.",
+    "assessment_notes": "Clear manic episode. YMRS score: 28. Requires immediate intervention.",
+    "suggested_diagnosis": {
+      "primary": "Bipolar I Disorder, Current Episode Manic",
+      "dsm5_code": "296.41",
+      "icd11_code": "6A60",
+      "confidence": 0.95
+    },
+    "treatment_recommendations": [
+      "Immediate mood stabilizer (lithium or valproate)",
+      "Consider brief hospitalization for safety",
+      "Medication adherence counseling",
+      "Psychoeducation about bipolar disorder",
+      "Family therapy for support system"
+    ],
+    "severity": "Severe",
+    "risk_factors": ["Non-adherence to medication", "Family history"],
+    "protective_factors": ["Previous response to treatment", "Employed", "Family awareness"]
+  },
+  {
+    "case_id": "CASE_005",
+    "patient_demographics": {
+      "age": 8,
+      "gender": "Male",
+      "occupation": "Student (3rd grade)"
+    },
+    "presenting_symptoms": [
+      "Difficulty paying attention in class for 18 months",
+      "Frequently interrupts others",
+      "Cannot sit still during lessons",
+      "Forgets to bring homework home",
+      "Easily distracted by external stimuli",
+      "Impulsive behavior (running into street)"
+    ],
+    "clinical_history": "Developmental milestones met on time. Academic performance declining. Teacher reports consistent problems.",
+    "assessment_notes": "ADHD-RS-5 scores: Inattention 24, Hyperactivity-Impulsivity 22. Meets criteria for ADHD.",
+    "suggested_diagnosis": {
+      "primary": "Attention-Deficit/Hyperactivity Disorder, Combined Presentation",
+      "dsm5_code": "314.01",
+      "icd11_code": "6A05",
+      "confidence": 0.85
+    },
+    "treatment_recommendations": [
+      "Behavioral parent training",
+      "School-based behavioral interventions",
+      "Consider stimulant medication trial",
+      "IEP/504 plan development",
+      "Social skills training"
+    ],
+    "severity": "Moderate",
+    "risk_factors": ["Academic impairment", "Social difficulties"],
+    "protective_factors": ["Supportive parents", "No comorbid conditions", "Young age for intervention"]
+  },
+  {
+    "case_id": "CASE_006",
+    "patient_demographics": {
+      "age": 31,
+      "gender": "Female",
+      "occupation": "Accountant"
+    },
+    "presenting_symptoms": [
+      "Intrusive thoughts about contamination",
+      "Excessive hand washing (50+ times daily)",
+      "Checking door locks repeatedly",
+      "Unable to touch doorknobs without gloves",
+      "Significant distress and time consumption",
+      "Avoidance of public restrooms"
+    ],
+    "clinical_history": "Symptoms began gradually 3 years ago, worsened during pandemic. No family history of OCD.",
+    "assessment_notes": "Y-BOCS score: 28 (severe). Clear obsessive-compulsive pattern.",
+    "suggested_diagnosis": {
+      "primary": "Obsessive-Compulsive Disorder",
+      "dsm5_code": "300.3",
+      "icd11_code": "6B20",
+      "confidence": 0.90
+    },
+    "treatment_recommendations": [
+      "Exposure and Response Prevention (ERP) therapy",
+      "Cognitive Behavioral Therapy for OCD",
+      "Consider SSRI (sertraline or fluoxetine)",
+      "Gradual exposure exercises",
+      "Family education about OCD"
+    ],
+    "severity": "Severe",
+    "risk_factors": ["Pandemic triggers", "Perfectionist personality"],
+    "protective_factors": ["Good insight", "Motivated for treatment", "Stable employment"]
+  }
+]
