@@ -102,6 +102,9 @@ assistant_memory.json
 .assistant_memory
 CLAUDE_*
 .CLAUDE_*
+CLAUDE.md
+.assistant.md
+assistant_*
 
 # Documentation builds
 docs/_build/
