@@ -56,14 +56,9 @@ class ApiClient {
 
   // Authentication endpoints
   async login(credentials: LoginRequest): Promise<LoginResponse> {
-    const formData = new FormData();
-    formData.append('username', credentials.username);
-    formData.append('password', credentials.password);
-    
-    const response = await this.client.post('/api/auth/login', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
+    const response = await this.client.post('/api/auth/login', {
+      username: credentials.username,
+      password: credentials.password
     });
     return response.data;
   }

@@ -1,46 +1,150 @@
+version: '3.8'
+
 services:
-  backend:
-    build: 
-      context: ./backend
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: therapy_assistant_db
+    restart: unless-stopped
     environment:
-      - DATABASE_URL=postgresql://therapy_user:therapy_pass@db:5432/therapy_assistant
-      - SECRET_KEY=your-super-secret-key-change-in-production
-      - PYTHONPATH=/app
-    depends_on:
-      - db
-    volumes:
-      - ./backend:/app
-      - vector_data:/app/data/vector_db
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-
-  frontend:
-    build:
-      context: ./frontend_python
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    environment:
-      - BACKEND_URL=http://backend:8000
-    depends_on:
-      - backend
-    volumes:
-      - ./frontend_python:/app
-    command: uvicorn app:app --host 0.0.0.0 --port 3000 --reload
-
-  db:
-    image: postgres:15
-    environment:
-      - POSTGRES_DB=therapy_assistant
-      - POSTGRES_USER=therapy_user
-      - POSTGRES_PASSWORD=therapy_pass
-    ports:
-      - "5432:5432"
+      POSTGRES_DB: therapy_assistant_db
+      POSTGRES_USER: therapy_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secure_password_change_me}
+      PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    ports:
+      - "5432:5432"
+    networks:
+      - therapy_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U therapy_user -d therapy_assistant_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Redis for session storage and caching
+  redis:
+    image: redis:7-alpine
+    container_name: therapy_assistant_redis
+    restart: unless-stopped
+    command: redis-server --requirepass ${REDIS_PASSWORD:-redis_password_change_me}
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - therapy_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: therapy_assistant_backend
+    restart: unless-stopped
+    environment:
+      # Database
+      DATABASE_URL: postgresql://therapy_user:${POSTGRES_PASSWORD:-secure_password_change_me}@postgres:5432/therapy_assistant_db
+      
+      # Security
+      SECRET_KEY: ${SECRET_KEY:-change_this_secret_key_in_production}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-change_this_jwt_secret_in_production}
+      
+      # OpenAI
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      
+      # API Configuration
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:3000}
+      
+      # Environment
+      ENVIRONMENT: production
+      DEBUG: false
+      LOG_LEVEL: INFO
+      
+      # Redis
+      REDIS_URL: redis://:${REDIS_PASSWORD:-redis_password_change_me}@redis:6379/0
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - therapy_network
+    volumes:
+      - ./backend/logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Frontend (Production build)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+      args:
+        REACT_APP_API_URL: ${BACKEND_URL:-http://localhost:8000}
+    container_name: therapy_assistant_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - therapy_network
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Nginx Reverse Proxy (Alternative configuration)
+  nginx:
+    image: nginx:alpine
+    container_name: therapy_assistant_nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/therapy.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./frontend/build:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - therapy_network
+    profiles:
+      - nginx-proxy
 
 volumes:
   postgres_data:
-  vector_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  therapy_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

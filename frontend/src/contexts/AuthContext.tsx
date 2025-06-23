@@ -81,7 +81,19 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       return true;
     } catch (error: any) {
       console.error('Login error:', error);
-      const message = error.response?.data?.detail || 'Login failed. Please try again.';
+      let message = 'Login failed. Please try again.';
+      
+      // Safely extract error message
+      if (error.response?.data?.detail) {
+        if (typeof error.response.data.detail === 'string') {
+          message = error.response.data.detail;
+        } else if (Array.isArray(error.response.data.detail)) {
+          message = error.response.data.detail.map((err: any) => err.msg).join(', ');
+        } else {
+          message = 'Invalid credentials. Please check your email and password.';
+        }
+      }
+      
       toast.error(message);
       return false;
     } finally {
