@@ -35,7 +35,6 @@ This directory contains the production configuration for the Therapy Assistant a
 - **Frontend**: React app served by Nginx on port 80
 - **Backend**: FastAPI with authentication on port 8000  
 - **PostgreSQL**: Database on port 5432
-- **Redis**: Session storage on port 6379
 - **Nginx Proxy**: Alternative reverse proxy on port 8080
 
 ## Environment Variables
