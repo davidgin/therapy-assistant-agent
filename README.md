@@ -22,12 +22,14 @@ therapy-assistant-agent/
 ├── backend/                    # FastAPI backend service
 │   ├── app/                   # Application code
 │   │   ├── api/              # API endpoints (auth, diagnostic, treatment)
+│   │   ├── config/           # Configuration (data sources, settings)
 │   │   ├── core/             # Core functionality (auth, config, database)
+│   │   ├── mcp/              # Model Context Protocol integration
 │   │   ├── models/           # Database models
-│   │   ├── services/         # Business logic (OpenAI, vector DB, knowledge base)
+│   │   ├── services/         # Business logic (OpenAI, vector DB, knowledge base, data acquisition)
 │   │   └── utils/            # Utility functions
 │   ├── alembic/              # Database migrations
-│   ├── data/                 # Backend data storage
+│   ├── data/                 # Backend data storage (acquired clinical data)
 │   ├── tests/                # Backend tests
 │   ├── Dockerfile            # Production Docker image
 │   └── requirements.txt      # Python dependencies
@@ -51,7 +53,8 @@ therapy-assistant-agent/
 │   ├── synthetic/            # Generated test data
 │   ├── raw/                  # Raw datasets
 │   └── processed/            # Processed datasets
-├── scripts/                   # Utility scripts
+├── scripts/                   # Utility scripts (data download, setup)
+│   ├── download_clinical_data.py  # Clinical data acquisition script
 ├── docs/                     # Documentation
 ├── docker-compose.yml        # Production deployment
 ├── .env.production          # Environment variables template
@@ -117,18 +120,26 @@ python scripts/synthetic_data_generator.py
 
 - **Frontend**: React with TypeScript, Tailwind CSS, React Router
 - **Backend**: FastAPI with Python, JWT authentication, OpenAI integration
-- **Database**: PostgreSQL with Alembic migrations
+- **Database**: PostgreSQL with Alembic migrations, AsyncSession for concurrent operations
 - **Deployment**: Docker Compose, Nginx reverse proxy
 - **Mobile**: Capacitor for Android/iOS cross-platform deployment
 - **AI**: OpenAI GPT-4, RAG with vector databases
 - **Security**: bcrypt password hashing, rate limiting, CORS protection
+- **Performance**: Async I/O for database, OpenAI API, and file operations
 
 ## Development Phases
 
 1. **Phase 1 (Complete)**: React migration, authentication, OpenAI integration
 2. **Phase 2 (Complete)**: Production deployment with Docker and PostgreSQL
-3. **Phase 3 (Future)**: Mobile app deployment and advanced AI features
-4. **Phase 4 (Future)**: Advanced analytics and international deployment
+3. **Phase 3 (Complete)**: Async I/O performance optimizations for concurrent users
+4. **Phase 4 (Complete)**: Enhanced vector database and RAG system implementation
+5. **Phase 5 (Future)**: Free clinical data integration and MCP protocol
+   - Download and integrate freely available clinical datasets
+   - Enhance vector database with DSM-5-TR, ICD-11, and clinical guidelines
+   - Implement Model Context Protocol (MCP) for external data sources
+   - Add real-time knowledge base updates and validation
+6. **Phase 6 (Future)**: Mobile app deployment and advanced AI features
+7. **Phase 7 (Future)**: Advanced analytics and international deployment
 
 ## Documentation
 
@@ -136,6 +147,8 @@ python scripts/synthetic_data_generator.py
 - [Development Tasks](docs/DEVELOPMENT_TASKS.md)
 - [Data Validation Report](docs/data_validation_report.md)
 - [Production Deployment Guide](README-production.md)
+- [Async Performance Improvements](ASYNC_IMPROVEMENTS.md)
+- [Phase 5: Data Integration Plan](docs/PHASE5_DATA_INTEGRATION_PLAN.md)
 
 ## Security & Compliance
 
