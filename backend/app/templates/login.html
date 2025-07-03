@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Therapy Assistant{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 400px; margin: 4rem auto;">
+    <h2>Login to Therapy Assistant</h2>
+    <p style="color: #6b7280; margin-bottom: 2rem;">
+        Sign in to access AI-powered diagnostic and treatment support tools.
+    </p>
+    
+    {% if error %}
+    <div class="alert alert-error">
+        {{ error }}
+    </div>
+    {% endif %}
+    
+    <form method="post" action="/login">
+        <div class="form-group">
+            <label for="username">Email Address</label>
+            <input 
+                type="email" 
+                id="username" 
+                name="username" 
+                required 
+                placeholder="Enter your email"
+                value="{{ request.form.get('username', '') }}"
+            >
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                required 
+                placeholder="Enter your password"
+            >
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Sign In
+        </button>
+    </form>
+    
+    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+        <h3 style="color: #374151; margin-bottom: 1rem;">Demo Accounts</h3>
+        <div style="background: #f9fafb; padding: 1rem; border-radius: 4px; font-size: 0.9rem;">
+            <p style="margin-bottom: 0.5rem;"><strong>Therapist:</strong> demo.therapist@example.com</p>
+            <p style="margin-bottom: 0.5rem;"><strong>Password:</strong> DemoTherapist123!</p>
+            <p style="margin-bottom: 0.5rem;"><strong>Student:</strong> demo.student@example.com</p>
+            <p style="margin-bottom: 0;"><strong>Password:</strong> StudentDemo789#</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

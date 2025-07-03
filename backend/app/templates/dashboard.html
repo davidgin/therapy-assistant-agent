@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Therapy Assistant{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Welcome, {{ user.first_name }} {{ user.last_name }}</h2>
+    <p>
+        <strong>Role:</strong> {{ user.role.value.title() }}
+        {% if user.license_type %}
+        | <strong>License:</strong> {{ user.license_type.value.upper() }}
+        {% endif %}
+        {% if user.license_number %}
+        ({{ user.license_number }})
+        {% endif %}
+    </p>
+    
+    {% if not openai_available %}
+    <div class="alert alert-warning">
+        <strong>Notice:</strong> OpenAI service is not configured. AI-powered features will not be available.
+    </div>
+    {% endif %}
+</div>
+
+<div class="dashboard-grid">
+    <div class="dashboard-card">
+        <h3>🧠 Diagnostic Assistant</h3>
+        <p>
+            Get AI-powered diagnostic assistance based on DSM-5-TR criteria. 
+            Enter patient symptoms and receive evidence-based differential diagnoses.
+        </p>
+        <a href="/diagnostic" class="btn btn-primary">Start Diagnostic Assessment</a>
+    </div>
+    
+    <div class="dashboard-card">
+        <h3>💊 Treatment Planning</h3>
+        <p>
+            Receive evidence-based treatment recommendations and intervention strategies 
+            tailored to specific diagnoses and patient contexts.
+        </p>
+        <a href="/treatment" class="btn btn-primary">Plan Treatment</a>
+    </div>
+    
+    <div class="dashboard-card">
+        <h3>📋 Case Analysis</h3>
+        <p>
+            Review synthetic clinical cases for training and educational purposes. 
+            Analyze complex scenarios and practice diagnostic reasoning.
+        </p>
+        <a href="/cases" class="btn btn-primary">View Cases</a>
+    </div>
+    
+    <div class="dashboard-card">
+        <h3>📊 System Status</h3>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="display: flex; justify-content: space-between;">
+                <span>AI Service:</span>
+                <span style="color: {{ 'green' if openai_available else 'red' }};">
+                    {{ '✓ Available' if openai_available else '✗ Unavailable' }}
+                </span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span>Database:</span>
+                <span style="color: green;">✓ Connected</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span>User Status:</span>
+                <span style="color: {{ 'green' if user.is_active else 'red' }};">
+                    {{ '✓ Active' if user.is_active else '✗ Inactive' }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Important Notice</h3>
+    <div class="alert alert-warning">
+        <strong>Educational Use Only:</strong> This application is designed for educational and clinical training purposes. 
+        All diagnostic and treatment decisions must be made by qualified mental health professionals through comprehensive 
+        clinical assessment. The AI-generated recommendations are meant to support, not replace, professional clinical judgment.
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}Case Analysis - Therapy Assistant{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>📋 Clinical Case Analysis</h2>
+    <p>
+        Review synthetic clinical cases for training and educational purposes. 
+        These cases are designed to help practice diagnostic reasoning and treatment planning skills.
+    </p>
+    
+    {% if not cases %}
+    <div class="alert alert-warning">
+        No clinical cases are currently available. Cases may be loaded from the synthetic data files.
+    </div>
+    {% endif %}
+</div>
+
+{% if cases %}
+<div class="case-list">
+    {% for case in cases %}
+    <div class="case-item">
+        <h4>{{ case.case_id }}</h4>
+        
+        <div class="case-meta">
+            {% if case.patient_demographics %}
+            {{ case.patient_demographics.age }}y {{ case.patient_demographics.gender }}
+            {% if case.patient_demographics.occupation %}
+            | {{ case.patient_demographics.occupation }}
+            {% endif %}
+            {% endif %}
+        </div>
+        
+        {% if case.presenting_symptoms %}
+        <div class="case-symptoms">
+            {% for symptom in case.presenting_symptoms[:5] %}
+            <span>{{ symptom }}</span>
+            {% endfor %}
+            {% if case.presenting_symptoms|length > 5 %}
+            <span style="color: #6b7280;">+{{ case.presenting_symptoms|length - 5 }} more</span>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        {% if case.clinical_history %}
+        <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;">
+            {{ case.clinical_history[:200] }}{% if case.clinical_history|length > 200 %}...{% endif %}
+        </p>
+        {% endif %}
+        
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            {% if case.suggested_diagnosis %}
+            <div>
+                <strong style="color: #1f2937;">{{ case.suggested_diagnosis.primary }}</strong>
+                {% if case.suggested_diagnosis.dsm5_code %}
+                <span style="color: #6b7280; font-size: 0.9rem;">({{ case.suggested_diagnosis.dsm5_code }})</span>
+                {% endif %}
+                {% if case.suggested_diagnosis.confidence %}
+                <div style="color: #6b7280; font-size: 0.8rem;">
+                    Confidence: {{ (case.suggested_diagnosis.confidence * 100)|round }}%
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            {% if case.severity %}
+            <span style="background: 
+                {% if case.severity == 'mild' %}#fef3c7; color: #92400e;
+                {% elif case.severity == 'moderate' %}#fed7aa; color: #c2410c;
+                {% elif case.severity == 'severe' %}#fee2e2; color: #991b1b;
+                {% else %}#f3f4f6; color: #374151;
+                {% endif %}
+                padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">
+                {{ case.severity.title() }}
+            </span>
+            {% endif %}
+        </div>
+        
+        {% if case.treatment_recommendations %}
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+            <strong style="color: #1f2937; font-size: 0.9rem;">Treatment Recommendations:</strong>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; color: #6b7280;">
+                {% for rec in case.treatment_recommendations[:3] %}
+                <li>{{ rec }}</li>
+                {% endfor %}
+                {% if case.treatment_recommendations|length > 3 %}
+                <li style="color: #9ca3af;">+{{ case.treatment_recommendations|length - 3 }} more recommendations</li>
+                {% endif %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="card">
+    <h3>Case Study Guidelines</h3>
+    <div class="alert alert-warning">
+        <strong>Educational Use:</strong>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li>These cases are synthetic and created for educational purposes only</li>
+            <li>Use cases to practice diagnostic reasoning and clinical decision-making</li>
+            <li>Consider multiple differential diagnoses for each case</li>
+            <li>Think about cultural, social, and contextual factors</li>
+            <li>Evaluate the appropriateness of suggested treatments</li>
+            <li>Consider what additional information would be helpful</li>
+        </ul>
+    </div>
+    
+    <div style="margin-top: 1.5rem;">
+        <h4>Case Analysis Framework</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>1. Data Gathering</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Review presenting symptoms, history, and context
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>2. Hypothesis Formation</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Generate differential diagnoses based on symptoms
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>3. Diagnostic Reasoning</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Apply DSM-5-TR criteria and clinical judgment
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>4. Treatment Planning</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Develop evidence-based intervention strategies
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div style="text-align: center; margin-top: 2rem;">
+    <a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+</div>
+{% endblock %}

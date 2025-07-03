@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Diagnostic Assistant - Therapy Assistant{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>🧠 AI Diagnostic Assistant</h2>
+    <p>
+        Enter patient symptoms and context to receive evidence-based differential diagnoses 
+        based on DSM-5-TR criteria. This tool provides clinical support for licensed mental health professionals.
+    </p>
+    
+    {% if error %}
+    <div class="alert alert-error">
+        {{ error }}
+    </div>
+    {% endif %}
+    
+    {% if success %}
+    <div class="alert alert-success">
+        Diagnostic analysis completed successfully.
+    </div>
+    {% endif %}
+    
+    <form method="post" action="/diagnostic">
+        <div class="form-group">
+            <label for="symptoms">Patient Symptoms *</label>
+            <textarea 
+                id="symptoms" 
+                name="symptoms" 
+                required 
+                placeholder="Describe the patient's presenting symptoms, including duration, severity, and impact on functioning..."
+                style="height: 150px;"
+            >{{ symptoms or '' }}</textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="patient_context">Patient Context</label>
+            <textarea 
+                id="patient_context" 
+                name="patient_context" 
+                placeholder="Additional context such as medical history, psychosocial factors, current medications, or relevant background information..."
+                style="height: 120px;"
+            >{{ patient_context or '' }}</textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+            Analyze Symptoms
+        </button>
+        
+        <a href="/dashboard" class="btn btn-secondary" style="margin-left: 1rem;">
+            Back to Dashboard
+        </a>
+    </form>
+</div>
+
+{% if ai_response %}
+<div class="response">
+    <h3>🤖 AI Diagnostic Analysis</h3>
+    <div class="response-content">{{ ai_response }}</div>
+    
+    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #6b7280;">
+        <p><strong>Input Summary:</strong></p>
+        <p><strong>Symptoms:</strong> {{ symptoms }}</p>
+        {% if patient_context %}
+        <p><strong>Context:</strong> {{ patient_context }}</p>
+        {% endif %}
+        <p><strong>Generated:</strong> {{ moment().format('YYYY-MM-DD HH:mm:ss') }}</p>
+    </div>
+</div>
+{% endif %}
+
+<div class="card">
+    <h3>Clinical Guidelines</h3>
+    <div class="alert alert-warning">
+        <strong>Professional Standards:</strong>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li>Always conduct comprehensive clinical interviews</li>
+            <li>Consider medical causes for psychiatric symptoms</li>
+            <li>Use standardized assessment tools when appropriate</li>
+            <li>Obtain collateral information when clinically indicated</li>
+            <li>Document all clinical reasoning and decision-making</li>
+            <li>Consult with colleagues or supervisors for complex cases</li>
+        </ul>
+    </div>
+    
+    <div style="margin-top: 1.5rem;">
+        <h4>Quick Reference</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>DSM-5-TR Criteria</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Standardized diagnostic criteria for mental disorders
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>Risk Assessment</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Evaluate suicide, homicide, and safety risks
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>Differential Diagnosis</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Consider alternative explanations for symptoms
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

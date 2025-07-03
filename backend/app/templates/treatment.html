@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Treatment Planning - Therapy Assistant{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>💊 Treatment Planning Assistant</h2>
+    <p>
+        Generate evidence-based treatment recommendations and intervention strategies 
+        tailored to specific diagnoses and patient contexts.
+    </p>
+    
+    {% if error %}
+    <div class="alert alert-error">
+        {{ error }}
+    </div>
+    {% endif %}
+    
+    {% if success %}
+    <div class="alert alert-success">
+        Treatment recommendations generated successfully.
+    </div>
+    {% endif %}
+    
+    <form method="post" action="/treatment">
+        <div class="form-group">
+            <label for="diagnosis">Primary Diagnosis *</label>
+            <input 
+                type="text" 
+                id="diagnosis" 
+                name="diagnosis" 
+                required 
+                placeholder="e.g., Major Depressive Disorder, Generalized Anxiety Disorder"
+                value="{{ diagnosis or '' }}"
+            >
+        </div>
+        
+        <div class="form-group">
+            <label for="patient_context">Patient Context & Considerations</label>
+            <textarea 
+                id="patient_context" 
+                name="patient_context" 
+                placeholder="Include relevant information such as: age, severity, comorbidities, previous treatments, cultural factors, preferences, contraindications..."
+                style="height: 120px;"
+            >{{ patient_context or '' }}</textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+            Generate Treatment Plan
+        </button>
+        
+        <a href="/dashboard" class="btn btn-secondary" style="margin-left: 1rem;">
+            Back to Dashboard
+        </a>
+    </form>
+</div>
+
+{% if ai_response %}
+<div class="response">
+    <h3>🎯 Treatment Recommendations</h3>
+    <div class="response-content">{{ ai_response }}</div>
+    
+    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #6b7280;">
+        <p><strong>Treatment Planning Summary:</strong></p>
+        <p><strong>Diagnosis:</strong> {{ diagnosis }}</p>
+        {% if patient_context %}
+        <p><strong>Context:</strong> {{ patient_context }}</p>
+        {% endif %}
+        <p><strong>Generated:</strong> {{ moment().format('YYYY-MM-DD HH:mm:ss') }}</p>
+    </div>
+</div>
+{% endif %}
+
+<div class="card">
+    <h3>Evidence-Based Treatment Modalities</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+            <h4 style="color: #0c4a6e; margin-bottom: 0.5rem;">Cognitive Behavioral Therapy (CBT)</h4>
+            <p style="font-size: 0.9rem; color: #075985;">
+                Effective for anxiety, depression, PTSD, and many other conditions. 
+                Focuses on identifying and modifying dysfunctional thought patterns and behaviors.
+            </p>
+        </div>
+        
+        <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #22c55e;">
+            <h4 style="color: #14532d; margin-bottom: 0.5rem;">Dialectical Behavior Therapy (DBT)</h4>
+            <p style="font-size: 0.9rem; color: #166534;">
+                Particularly effective for borderline personality disorder and emotional dysregulation. 
+                Teaches mindfulness, distress tolerance, and interpersonal skills.
+            </p>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
+            <h4 style="color: #92400e; margin-bottom: 0.5rem;">Pharmacotherapy</h4>
+            <p style="font-size: 0.9rem; color: #a16207;">
+                Medication management for conditions like depression, anxiety, bipolar disorder, and psychosis. 
+                Requires psychiatric consultation and monitoring.
+            </p>
+        </div>
+        
+        <div style="background: #fdf2f8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ec4899;">
+            <h4 style="color: #831843; margin-bottom: 0.5rem;">Psychodynamic Therapy</h4>
+            <p style="font-size: 0.9rem; color: #9d174d;">
+                Explores unconscious processes and early experiences. 
+                Effective for personality disorders and complex trauma.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Treatment Planning Considerations</h3>
+    <div class="alert alert-warning">
+        <strong>Clinical Best Practices:</strong>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li>Conduct thorough assessment before treatment planning</li>
+            <li>Consider patient preferences and cultural factors</li>
+            <li>Establish clear, measurable treatment goals</li>
+            <li>Monitor progress with standardized outcome measures</li>
+            <li>Adjust treatment plan based on patient response</li>
+            <li>Consider comorbid conditions and their interactions</li>
+            <li>Evaluate need for referrals to specialists</li>
+            <li>Document treatment rationale and modifications</li>
+        </ul>
+    </div>
+    
+    <div style="margin-top: 1.5rem;">
+        <h4>Common Treatment Goals</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>Symptom Reduction</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Decrease severity and frequency of target symptoms
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>Functional Improvement</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Enhance daily functioning and quality of life
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>Skill Development</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Build coping strategies and emotional regulation
+                </p>
+            </div>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 4px;">
+                <strong>Relapse Prevention</strong>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
+                    Develop strategies to maintain progress
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
