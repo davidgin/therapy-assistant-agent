@@ -294,6 +294,164 @@
             border-radius: 12px;
             font-size: 0.8rem;
         }
+        
+        /* Voice Recording Styles */
+        .voice-recorder {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #0ea5e9;
+        }
+        
+        .voice-recorder h3 {
+            color: #0c4a6e;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .voice-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .voice-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .voice-btn-record {
+            background: #10b981;
+            color: white;
+        }
+        
+        .voice-btn-record:hover {
+            background: #059669;
+        }
+        
+        .voice-btn-stop {
+            background: #ef4444;
+            color: white;
+        }
+        
+        .voice-btn-stop:hover {
+            background: #dc2626;
+        }
+        
+        .voice-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .recording-status {
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+        
+        .recording-time {
+            font-family: monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ef4444;
+            margin-left: 1rem;
+        }
+        
+        .voice-analysis-results {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .analysis-chips {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .chip {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: white;
+        }
+        
+        .tone-calm { background: #10b981; }
+        .tone-anxious { background: #f59e0b; }
+        .tone-depressed { background: #6b7280; }
+        .tone-agitated { background: #ef4444; }
+        .tone-neutral { background: #8b5cf6; }
+        
+        .emotion-happy { background: #10b981; }
+        .emotion-sad { background: #6b7280; }
+        .emotion-angry { background: #ef4444; }
+        .emotion-anxious { background: #f59e0b; }
+        .emotion-neutral { background: #8b5cf6; }
+        
+        .sentiment-positive { background: #10b981; }
+        .sentiment-negative { background: #ef4444; }
+        .sentiment-neutral { background: #6b7280; }
+        
+        .analysis-metrics {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-around;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
+        }
+        
+        .metric-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        .voice-error {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .voice-success {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .voice-disclaimer {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #f9fafb;
+            border-radius: 4px;
+            border-left: 3px solid #f59e0b;
+        }
     </style>
 </head>
 <body>
@@ -325,5 +483,7 @@
             <p>&copy; 2024 Therapy Assistant. For educational and clinical support purposes only.</p>
         </div>
     </footer>
+    
+    <script src="/static/voice-recorder.js"></script>
 </body>
 </html>

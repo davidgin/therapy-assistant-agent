@@ -22,6 +22,32 @@
     </div>
     {% endif %}
     
+    <div class="voice-recorder">
+        <h3>🎤 Voice Analysis</h3>
+        <p>Record patient speech to analyze tone, emotion, and speech patterns for enhanced diagnostic insights.</p>
+        
+        <div class="voice-controls">
+            <button type="button" id="record-btn" class="voice-btn voice-btn-record" onclick="window.voiceRecorder.startRecording()">
+                🎤 Start Recording
+            </button>
+            <button type="button" id="stop-btn" class="voice-btn voice-btn-stop" onclick="window.voiceRecorder.stopRecording()" style="display: none;">
+                ⏹️ Stop Recording
+            </button>
+            <span id="recording-status" class="recording-status"></span>
+            <span id="recording-time" class="recording-time" style="display: none;">0:00</span>
+        </div>
+        
+        <div id="voice-analysis-results" class="voice-analysis-results" style="display: none;"></div>
+        
+        <div id="voice-error" class="voice-error"></div>
+        <div id="voice-success" class="voice-success"></div>
+        
+        <div class="voice-disclaimer">
+            <strong>Note:</strong> Voice analysis provides additional clinical insights but should not replace professional clinical judgment. 
+            Ensure patient consent before recording.
+        </div>
+    </div>
+    
     <form method="post" action="/diagnostic">
         <div class="form-group">
             <label for="symptoms">Patient Symptoms *</label>
