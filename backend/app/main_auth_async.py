@@ -298,8 +298,9 @@ async def health_check():
     
     return health_status
 
-from pydantic import BaseModel, validator
+from pydantic import BaseModel, validator, Field
 import re
+from typing import Dict, Any, Optional, List
 from .services.audio_analysis import audio_analysis_service
 
 def validate_password_strength(password: str) -> str:
@@ -319,27 +320,43 @@ def validate_password_strength(password: str) -> str:
     return password
 
 class LoginRequest(BaseModel):
-    username: str
-    password: str
+    """Login request model"""
+    username: str = Field(..., description="Username or email")
+    password: str = Field(..., description="Password")
 
 class RegistrationRequest(BaseModel):
-    username: str
-    email: str
-    password: str
-    first_name: str
-    last_name: str
+    """User registration request model"""
+    username: str = Field(..., description="Username")
+    email: str = Field(..., description="Email address")
+    password: str = Field(..., description="Password")
+    first_name: str = Field(..., description="First name")
+    last_name: str = Field(..., description="Last name")
     
     @validator('password')
-    def validate_password(cls, v):
+    def validate_password(cls, v: str) -> str:
         return validate_password_strength(v)
 
 class DiagnosticRequest(BaseModel):
-    symptoms: str
-    patient_context: Optional[str] = None
+    """Diagnostic analysis request model"""
+    symptoms: str = Field(..., description="Patient symptoms description")
+    patient_context: Optional[str] = Field(None, description="Additional patient context")
+
+class DiagnosticResponse(BaseModel):
+    """Diagnostic analysis response model"""
+    status: str = Field(..., description="Response status")
+    ai_response: Dict[str, Any] = Field(..., description="AI analysis result")
+    query: Dict[str, Any] = Field(..., description="Original query data")
 
 class TreatmentRequest(BaseModel):
-    diagnosis: str
-    patient_context: Optional[str] = None
+    """Treatment planning request model"""
+    diagnosis: str = Field(..., description="Primary diagnosis")
+    patient_context: Optional[str] = Field(None, description="Additional patient context")
+
+class TreatmentResponse(BaseModel):
+    """Treatment planning response model"""
+    status: str = Field(..., description="Response status")
+    ai_response: Dict[str, Any] = Field(..., description="AI treatment recommendations")
+    query: Dict[str, Any] = Field(..., description="Original query data")
 
 @app.post("/api/auth/login")
 @limiter.limit("5/minute")
@@ -717,19 +734,35 @@ This is for educational and clinical training purposes."""
 
 # Voice Analysis Endpoints
 class VoiceTranscriptionRequest(BaseModel):
-    audio_data: str  # base64 encoded audio
+    """Voice transcription request model"""
+    audio_data: str = Field(..., description="Base64 encoded audio data")
+
+class VoiceTranscriptionResponse(BaseModel):
+    """Voice transcription response model"""
+    transcription: str = Field(..., description="Transcribed text")
 
 class VoiceAnalysisRequest(BaseModel):
-    audio_data: str  # base64 encoded audio
+    """Voice analysis request model"""
+    audio_data: str = Field(..., description="Base64 encoded audio data")
 
-@app.post("/voice/transcribe")
+class VoiceAnalysisResponse(BaseModel):
+    """Voice analysis response model"""
+    transcription: str = Field(..., description="Transcribed text")
+    sentiment: str = Field(..., description="Sentiment classification")
+    emotion: str = Field(..., description="Detected emotion")
+    tone: str = Field(..., description="Voice tone classification")
+    speechRate: float = Field(..., description="Speech rate in words per minute")
+    pauseFrequency: float = Field(..., description="Pause frequency per minute")
+    confidence: float = Field(..., description="Analysis confidence score")
+
+@app.post("/voice/transcribe", response_model=VoiceTranscriptionResponse)
 @limiter.limit("10/minute")
 async def transcribe_audio(
     request: Request,
     voice_request: VoiceTranscriptionRequest,
     db: AsyncSession = Depends(get_async_db),
     current_user: User = Depends(get_current_user)
-):
+) -> VoiceTranscriptionResponse:
     """Transcribe audio to text using speech recognition"""
     try:
         logger.info(f"Transcribing audio for user: {current_user.email}")
@@ -746,7 +779,7 @@ async def transcribe_audio(
         
         logger.info(f"Audio transcription completed for user: {current_user.email}")
         
-        return {"transcription": transcription}
+        return VoiceTranscriptionResponse(transcription=transcription)
         
     except HTTPException:
         raise
@@ -757,14 +790,14 @@ async def transcribe_audio(
             detail="Audio transcription failed"
         )
 
-@app.post("/voice/analyze")
+@app.post("/voice/analyze", response_model=VoiceAnalysisResponse)
 @limiter.limit("10/minute")
 async def analyze_voice(
     request: Request,
     voice_request: VoiceAnalysisRequest,
     db: AsyncSession = Depends(get_async_db),
     current_user: User = Depends(get_current_user)
-):
+) -> VoiceAnalysisResponse:
     """Comprehensive voice analysis including transcription, tone, and emotion detection"""
     try:
         logger.info(f"Analyzing voice for user: {current_user.email}")
@@ -781,15 +814,15 @@ async def analyze_voice(
         
         logger.info(f"Voice analysis completed for user: {current_user.email}")
         
-        return {
-            "transcription": analysis.transcription,
-            "sentiment": analysis.sentiment,
-            "emotion": analysis.emotion,
-            "tone": analysis.tone,
-            "speechRate": analysis.speech_rate,
-            "pauseFrequency": analysis.pause_frequency,
-            "confidence": analysis.confidence
-        }
+        return VoiceAnalysisResponse(
+            transcription=analysis.transcription,
+            sentiment=analysis.sentiment,
+            emotion=analysis.emotion,
+            tone=analysis.tone,
+            speechRate=analysis.speech_rate,
+            pauseFrequency=analysis.pause_frequency,
+            confidence=analysis.confidence
+        )
         
     except HTTPException:
         raise

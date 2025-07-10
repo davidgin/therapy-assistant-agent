@@ -3,7 +3,7 @@ FastAPI web application with server-side rendering (no React/Node.js)
 """
 
 from fastapi import FastAPI, Request, Depends, HTTPException, status, Form
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,7 +12,7 @@ from sqlalchemy import select
 from contextlib import asynccontextmanager
 import logging
 from datetime import timedelta
-from typing import Optional
+from typing import Optional, Union, Dict, Any
 import os
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
@@ -40,7 +40,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai_client = AsyncOpenAI(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(app: FastAPI) -> None:
     """Application lifespan events"""
     logger.info("Starting Therapy Assistant Web Application...")
     
@@ -85,7 +85,7 @@ templates = Jinja2Templates(directory="backend/app/templates")
 from fastapi import Cookie
 from fastapi.responses import Response
 
-def get_current_user_from_cookie(token: Optional[str] = Cookie(None)):
+def get_current_user_from_cookie(token: Optional[str] = Cookie(None)) -> Optional[str]:
     """Get current user from session cookie"""
     if not token:
         return None
@@ -96,7 +96,7 @@ def get_current_user_from_cookie(token: Optional[str] = Cookie(None)):
     
     return payload.get("sub")  # email
 
-async def get_current_user_required(request: Request, db: AsyncSession = Depends(get_async_db)):
+async def get_current_user_required(request: Request, db: AsyncSession = Depends(get_async_db)) -> Union[User, RedirectResponse]:
     """Get current user or redirect to login"""
     token = request.cookies.get("token")
     if not token:
@@ -120,7 +120,7 @@ async def get_current_user_required(request: Request, db: AsyncSession = Depends
 
 # Routes
 @app.get("/", response_class=HTMLResponse)
-async def home(request: Request):
+async def home(request: Request) -> RedirectResponse:
     """Home page - redirect to dashboard if logged in, otherwise show login"""
     user_email = get_current_user_from_cookie(request.cookies.get("token"))
     
@@ -130,7 +130,7 @@ async def home(request: Request):
         return RedirectResponse(url="/login", status_code=302)
 
 @app.get("/login", response_class=HTMLResponse)
-async def login_page(request: Request):
+async def login_page(request: Request) -> HTMLResponse:
     """Login page"""
     return templates.TemplateResponse("login.html", {"request": request})
 
@@ -141,7 +141,7 @@ async def login_post(
     username: str = Form(...),
     password: str = Form(...),
     db: AsyncSession = Depends(get_async_db)
-):
+) -> Union[HTMLResponse, RedirectResponse]:
     """Handle login form submission"""
     try:
         # Authenticate user
@@ -183,14 +183,14 @@ async def login_post(
         )
 
 @app.get("/logout")
-async def logout():
+async def logout() -> RedirectResponse:
     """Logout and clear session"""
     response = RedirectResponse(url="/login", status_code=302)
     response.delete_cookie("token")
     return response
 
 @app.get("/dashboard", response_class=HTMLResponse)
-async def dashboard(request: Request, db: AsyncSession = Depends(get_async_db)):
+async def dashboard(request: Request, db: AsyncSession = Depends(get_async_db)) -> Union[HTMLResponse, RedirectResponse]:
     """Dashboard page"""
     user = await get_current_user_required(request, db)
     if isinstance(user, RedirectResponse):
@@ -206,7 +206,7 @@ async def dashboard(request: Request, db: AsyncSession = Depends(get_async_db)):
     )
 
 @app.get("/diagnostic", response_class=HTMLResponse)
-async def diagnostic_page(request: Request, db: AsyncSession = Depends(get_async_db)):
+async def diagnostic_page(request: Request, db: AsyncSession = Depends(get_async_db)) -> Union[HTMLResponse, RedirectResponse]:
     """Diagnostic assistant page"""
     user = await get_current_user_required(request, db)
     if isinstance(user, RedirectResponse):
@@ -224,7 +224,7 @@ async def diagnostic_post(
     symptoms: str = Form(...),
     patient_context: str = Form(""),
     db: AsyncSession = Depends(get_async_db)
-):
+) -> Union[HTMLResponse, RedirectResponse]:
     """Handle diagnostic form submission"""
     user = await get_current_user_required(request, db)
     if isinstance(user, RedirectResponse):
@@ -296,7 +296,7 @@ Provide a structured, evidence-based response."""
         )
 
 @app.get("/treatment", response_class=HTMLResponse)
-async def treatment_page(request: Request, db: AsyncSession = Depends(get_async_db)):
+async def treatment_page(request: Request, db: AsyncSession = Depends(get_async_db)) -> Union[HTMLResponse, RedirectResponse]:
     """Treatment planning page"""
     user = await get_current_user_required(request, db)
     if isinstance(user, RedirectResponse):
@@ -314,7 +314,7 @@ async def treatment_post(
     diagnosis: str = Form(...),
     patient_context: str = Form(""),
     db: AsyncSession = Depends(get_async_db)
-):
+) -> Union[HTMLResponse, RedirectResponse]:
     """Handle treatment planning form submission"""
     user = await get_current_user_required(request, db)
     if isinstance(user, RedirectResponse):
@@ -386,7 +386,7 @@ Provide structured, evidence-based recommendations following best practices."""
         )
 
 @app.get("/cases", response_class=HTMLResponse)
-async def cases_page(request: Request, db: AsyncSession = Depends(get_async_db)):
+async def cases_page(request: Request, db: AsyncSession = Depends(get_async_db)) -> Union[HTMLResponse, RedirectResponse]:
     """Case analysis page"""
     user = await get_current_user_required(request, db)
     if isinstance(user, RedirectResponse):
@@ -410,7 +410,7 @@ async def cases_page(request: Request, db: AsyncSession = Depends(get_async_db))
     )
 
 @app.get("/health")
-async def health_check():
+async def health_check() -> Dict[str, Any]:
     """Health check endpoint"""
     return {
         "status": "healthy", 
@@ -420,14 +420,14 @@ async def health_check():
 
 # Error handlers
 @app.exception_handler(404)
-async def not_found_handler(request: Request, exc):
+async def not_found_handler(request: Request, exc: Exception) -> HTMLResponse:
     return templates.TemplateResponse(
         "error.html", 
         {"request": request, "error": "Page not found", "status_code": 404}
     )
 
 @app.exception_handler(500)
-async def internal_error_handler(request: Request, exc):
+async def internal_error_handler(request: Request, exc: Exception) -> HTMLResponse:
     return templates.TemplateResponse(
         "error.html", 
         {"request": request, "error": "Internal server error", "status_code": 500}
