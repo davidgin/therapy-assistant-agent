@@ -68,7 +68,25 @@ therapy-assistant-agent/
 
 ## Quick Start
 
-### Production Deployment (Recommended)
+### AWS Cloud Deployment (Recommended)
+```bash
+# 1. Set up environment variables
+export AWS_DEFAULT_REGION=us-west-2
+export OPENAI_API_KEY=your_openai_api_key_here
+export TF_VAR_openai_api_key=$OPENAI_API_KEY
+
+# 2. Deploy to development environment
+cd terraform
+./scripts/build-and-deploy.sh dev
+
+# 3. Deploy to staging environment
+./scripts/build-and-deploy.sh staging
+
+# 4. Deploy to production environment
+./scripts/build-and-deploy.sh prod
+```
+
+### Local Docker Deployment
 ```bash
 # 1. Set up environment variables
 cp .env.production .env
@@ -135,11 +153,14 @@ python scripts/synthetic_data_generator.py
 - **Mobile App**: React Native with TypeScript, React Navigation, React Native Paper
 - **Backend**: FastAPI with Python, JWT authentication, OpenAI integration
 - **Database**: PostgreSQL with Alembic migrations, AsyncSession for concurrent operations
-- **Deployment**: Docker Compose, single container deployment
+- **Cloud Deployment**: AWS ECS Fargate, RDS PostgreSQL, Application Load Balancer
+- **Infrastructure**: Terraform for Infrastructure as Code, automated deployment scripts
+- **Container Registry**: Amazon ECR for Docker image storage
+- **Monitoring**: CloudWatch dashboards, alarms, and centralized logging
 - **Mobile Build**: Android APK/AAB and iOS IPA generation scripts
 - **AI**: OpenAI GPT-4, RAG with vector databases
 - **Voice Analysis**: Speech recognition, librosa audio processing, tone/emotion detection
-- **Security**: bcrypt password hashing, rate limiting, CORS protection
+- **Security**: bcrypt password hashing, rate limiting, CORS protection, AWS security best practices
 - **Performance**: Async I/O for database, OpenAI API, and file operations
 
 ## Development Phases
@@ -184,6 +205,7 @@ python scripts/synthetic_data_generator.py
 - [Phase 5: Data Integration Plan](docs/PHASE5_DATA_INTEGRATION_PLAN.md)
 - [Phase 7: Voice Analysis Implementation](docs/PHASE7_VOICE_ANALYSIS.md)
 - [Phase 8: LLM and RAG Optimization](docs/PHASE8_LLM_RAG_OPTIMIZATION.md)
+- [Terraform Infrastructure Deployment](terraform/README.md)
 
 ## Security & Compliance
 

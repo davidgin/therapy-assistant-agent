@@ -1,0 +1,9 @@
+{
+  "name": "TherapyAssistant",
+  "displayName": "Therapy Assistant",
+  "description": "AI-powered mental health diagnostic and treatment planning assistant",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "privacy": "private",
+  "slug": "therapy-assistant"
+}
