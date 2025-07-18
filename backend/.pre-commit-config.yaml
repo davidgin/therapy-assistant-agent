@@ -1,0 +1,175 @@
+# Pre-commit hooks for therapy-assistant-agent
+# See https://pre-commit.com for more information
+
+repos:
+  # Python code formatting
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+        language_version: python3
+        args: [--line-length=88]
+
+  # Import sorting
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: [--profile=black, --line-length=88]
+
+  # Remove unused imports and variables
+  - repo: https://github.com/pycqa/autoflake
+    rev: v2.2.1
+    hooks:
+      - id: autoflake
+        args:
+          - --remove-all-unused-imports
+          - --remove-unused-variables
+          - --remove-duplicate-keys
+          - --expand-star-imports
+          - --in-place
+
+  # Linting with flake8
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-docstrings
+          - flake8-bugbear
+          - flake8-comprehensions
+          - flake8-simplify
+          - flake8-bandit
+        args: [--max-line-length=88, --max-complexity=10]
+
+  # Type checking with mypy
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1
+    hooks:
+      - id: mypy
+        additional_dependencies:
+          - types-python-dateutil
+          - types-requests
+          - types-PyYAML
+          - types-redis
+        args: [--strict, --ignore-missing-imports]
+        exclude: ^(migrations/|tests/)
+
+  # Security linting with bandit
+  - repo: https://github.com/pycqa/bandit
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        args: [-r, .]
+        exclude: ^tests/
+
+  # Check for common security issues
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: [--baseline, .secrets.baseline]
+        exclude: .*\.lock$|package-lock\.json$
+
+  # General file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      # Check file formatting
+      - id: trailing-whitespace
+        exclude: \.md$
+      - id: end-of-file-fixer
+        exclude: \.md$
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: check-json
+      - id: check-toml
+      - id: check-xml
+      
+      # Check for issues
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      
+      # Python specific
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-docstring-first
+      - id: debug-statements
+      - id: requirements-txt-fixer
+      
+      # Prevent commits to main
+      - id: no-commit-to-branch
+        args: [--branch, main, --branch, master]
+
+  # Check dependencies for known security vulnerabilities
+  - repo: https://github.com/pyupio/safety
+    rev: 2.3.5
+    hooks:
+      - id: safety
+        args: [--ignore, 51457]  # Ignore specific CVE if needed
+
+  # Dockerfile linting
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.12.0
+    hooks:
+      - id: hadolint-docker
+        files: Dockerfile.*
+
+  # YAML linting
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.32.0
+    hooks:
+      - id: yamllint
+        args: [-d, relaxed]
+
+  # Check Python dependencies
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.4
+    hooks:
+      - id: forbid-crlf
+      - id: remove-crlf
+      - id: forbid-tabs
+      - id: remove-tabs
+
+  # Local hooks for project-specific checks
+  - repo: local
+    hooks:
+      # Run tests before commit
+      - id: pytest
+        name: pytest
+        entry: python -m pytest tests/unit -x -q
+        language: system
+        pass_filenames: false
+        stages: [commit]
+
+      # Check imports
+      - id: check-imports
+        name: Check for relative imports
+        entry: python -c "import sys; sys.exit(any('from .' in line or 'import .' in line for line in open(sys.argv[1]).readlines()))"
+        language: system
+        files: \.py$
+        exclude: ^tests/
+
+      # Validate database models
+      - id: validate-models
+        name: Validate SQLAlchemy models
+        entry: python -c "from app.models import *; print('✅ Models validation passed')"
+        language: system
+        files: ^app/models/.*\.py$
+        pass_filenames: false
+
+# Configuration for specific hooks
+ci:
+  autofix_commit_msg: |
+    [pre-commit.ci] auto fixes from pre-commit hooks
+
+    for more information, see https://pre-commit.ci
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: weekly
+  skip: [pytest, validate-models]  # Skip tests and model validation in CI
+  submodules: false

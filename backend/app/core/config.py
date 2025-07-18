@@ -26,6 +26,9 @@ class Settings(BaseSettings):
     # Database Configuration
     DATABASE_URL: str = "postgresql://therapy_user:therapy_pass@localhost:5432/therapy_assistant"
     DATABASE_ECHO: bool = False  # Set to True for SQL query logging
+    DATABASE_POOL_SIZE: int = 20
+    DATABASE_MAX_OVERFLOW: int = 30
+    DATABASE_POOL_RECYCLE: int = 3600  # Recycle connections after 1 hour
     
     # Security Configuration
     SECRET_KEY: str = "your-secret-key-change-in-production"
